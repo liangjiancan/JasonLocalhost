@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jasonlocalhost</artifactId>
+        <groupId>com.jasonlocalhost</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jasonlocalhost-common</artifactId>
+    <packaging>pom</packaging>
+
+    <name>jasonlocalhost-common</name>
+    <description>Jason's Localhost项目公共模块</description>
+    <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>jasonlocalhost-common-api</module>
+        <module>jasonlocalhost-common-service</module>
+        <module>jasonlocalhost-common-web</module>
+    </modules>
+
+</project>

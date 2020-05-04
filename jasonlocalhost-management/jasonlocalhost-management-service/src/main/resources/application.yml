@@ -1,0 +1,10 @@
+server:
+    port: 9001 # 项目端口号
+spring:
+    application:
+        name: jasonlocalhost-management-service
+    datasource:
+        url: jdbc:mysql://192.168.154.11:3306/jason_localhost_alpha?characterEncoding=UTF8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root

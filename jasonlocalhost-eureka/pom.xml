@@ -3,15 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jasonlocalhost-management</artifactId>
+        <artifactId>jasonlocalhost</artifactId>
         <groupId>com.jasonlocalhost</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jasonlocalhost-management-service</artifactId>
+    <artifactId>jasonlocalhost-eureka</artifactId>
 
-    <name>jasonlocalhost-management-service</name>
+    <name>jasonlocalhost-eureka</name>
+    <description>Jason's Localhost项目Eureka Server</description>
     <url>http://maven.apache.org</url>
 
     <dependencyManagement>
@@ -27,10 +28,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--Eureka-->
         <dependency>
-            <groupId>com.jasonlocalhost</groupId>
-            <artifactId>jasonlocalhost-common-service</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 

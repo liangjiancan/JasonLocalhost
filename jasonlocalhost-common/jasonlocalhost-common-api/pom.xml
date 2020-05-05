@@ -27,15 +27,15 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>com.jasonlocalhost</groupId>
-            <artifactId>jasonlocalhost-management-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--参数校验-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!--启动时启动内置tomcat-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
         <!--swagger注解接口和实体类-->
         <dependency>
@@ -43,27 +43,31 @@
             <artifactId>swagger-annotations</artifactId>
         </dependency>
         <!--缓存注解-->
-        <dependency>
-            <artifactId>jetcache-anno-api</artifactId>
-            <groupId>com.alicp.jetcache</groupId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<artifactId>jetcache-anno-api</artifactId>-->
+            <!--<groupId>com.alicp.jetcache</groupId>-->
+        <!--</dependency>-->
         <!--poi-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-schemas</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml-schemas</artifactId>-->
+        <!--</dependency>-->
         <!--dom4j-->
+        <!--<dependency>-->
+            <!--<groupId>org.dom4j</groupId>-->
+            <!--<artifactId>dom4j</artifactId>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>org.dom4j</groupId>
-            <artifactId>dom4j</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
         </dependency>
         <!--lombok-->
         <dependency>

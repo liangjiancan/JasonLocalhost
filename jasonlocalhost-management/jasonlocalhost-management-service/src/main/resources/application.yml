@@ -1,10 +1,22 @@
 server:
-    port: 9001 # 项目端口号
+    port: 50001 # 项目端口号
+
 spring:
     application:
         name: jasonlocalhost-management-service
     datasource:
-        url: jdbc:mysql://192.168.154.11:3306/jason_localhost_alpha?characterEncoding=UTF8
-        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.154.11:3306/db_management?characterEncoding=UTF8
+        driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
         password: root
+
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${server.port}
+

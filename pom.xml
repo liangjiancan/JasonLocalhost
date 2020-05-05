@@ -20,6 +20,7 @@
         <module>jasonlocalhost-blog</module>
         <module>jasonlocalhost-picture</module>
         <module>jasonlocalhost-common</module>
+        <module>jasonlocalhost-eureka</module>
     </modules>
 
     <profiles>
@@ -57,7 +58,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jdk.version>1.8</jdk.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-        <spring.boot.dependencies.version>2.2.0.RELEASE</spring.boot.dependencies.version>
+        <spring.boot.dependencies.version>2.1.8.RELEASE</spring.boot.dependencies.version>
     </properties>
 
     <build>

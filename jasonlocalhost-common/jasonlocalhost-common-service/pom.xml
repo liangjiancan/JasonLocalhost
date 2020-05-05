@@ -74,10 +74,10 @@
         <!--<artifactId>seata-all</artifactId>-->
         <!--</dependency>-->
         <!--apollo-->
-        <!--<dependency>-->
-        <!--<groupId>com.ctrip.framework.apollo</groupId>-->
-        <!--<artifactId>apollo-client</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+        </dependency>
         <!--redis-->
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->

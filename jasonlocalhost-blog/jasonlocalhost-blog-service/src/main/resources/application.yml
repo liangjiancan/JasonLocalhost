@@ -3,15 +3,14 @@ spring:
         name: jasonlocalhost-blog-service
 
 app:
-    id: jlh-service
+    id: jlh-blog # 指定appid
 
 apollo:
-    cluster: blog # 指定集群
     property:
         order:
-            enable: true # 开启按顺序加载配置, 适用于对加载配置的顺序有要求时, 如spring cloud zuul的路由规则
+            enable: true # 开启按顺序加载配置, 适用于对加载配置的顺序有优先级要求时, 如spring cloud zuul的路由规则
     bootstrap:
         eagerLoad:
             enabled: true # 开启主动加载
         enabled: true # 开启启动阶段加载配置
-        namespaces: dev_dept.application, dev_dept.datasource # 指定需要加载的命名空间的配置
+        namespaces: application # 指定需要加载的命名空间的配置

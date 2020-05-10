@@ -3,18 +3,17 @@ spring:
         name: jasonlocalhost-picture-web
 
 app:
-    id: jlh-web
+    id: jlh-picture # 指定appid
 
 apollo:
-    cluster: picture
     property:
         order:
-            enable: true
+            enable: true # 开启按顺序加载配置, 适用于对加载配置的顺序有要求时, 如spring cloud zuul的路由规则
     bootstrap:
         eagerLoad:
             enabled: true # 开启主动加载
         enabled: true # 开启启动阶段加载配置
-        namespaces: dev_dept.application, dev_dept.datasource # 指定需要加载的命名空间的配置
+        namespaces: application # 指定需要加载的命名空间的配置
 
 server:
     port: 50003 # 项目端口号

@@ -27,6 +27,11 @@
         </dependencies>
     </dependencyManagement>
 
+    <properties>
+        <springboot.mainclass>com.jason.jlh.eureka.run.JlhEurekaApplication</springboot.mainclass>
+        <server.port>58761</server.port>
+    </properties>
+
     <dependencies>
         <!--Eureka-->
         <dependency>
@@ -38,8 +43,22 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.maven.plugin.version}</version>
+                <configuration>
+                    <exposes>
+                        <expose>${server.port}</expose>
+                    </exposes>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--指定main方法所在的类，必须-->
+                    <mainClass>${springboot.mainclass}</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

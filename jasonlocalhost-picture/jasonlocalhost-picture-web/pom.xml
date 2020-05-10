@@ -14,6 +14,11 @@
     <name>jasonlocalhost-picture-web</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <springboot.mainclass>com.jason.jlh.picture.run.JlhPictureWebApplication</springboot.mainclass>
+        <server.port>50003</server.port>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -42,11 +47,23 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.maven.plugin.version}</version>
+                <configuration>
+                    <exposes>
+                        <expose>${server.port}</expose>
+                    </exposes>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--指定main方法所在的类，必须-->
+                    <mainClass>${springboot.mainclass}</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-
 </project>

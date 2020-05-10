@@ -14,6 +14,10 @@
     <name>jasonlocalhost-management-service</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <springboot.mainclass>com.jason.jlh.management.run.JlhManagementServiceApplication</springboot.mainclass>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -37,8 +41,17 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.maven.plugin.version}</version>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--指定main方法所在的类，必须-->
+                    <mainClass>${springboot.mainclass}</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

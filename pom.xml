@@ -58,12 +58,36 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jdk.version>1.8</jdk.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <docker.maven.plugin.version>1.2.2</docker.maven.plugin.version>
         <spring.boot.dependencies.version>2.1.8.RELEASE</spring.boot.dependencies.version>
+        <docker.host>http://192.168.154.11:52375</docker.host>
+        <docker.imageName>192.168.154.11:50000/${project.artifactId}:${project.version}</docker.imageName>
+        <docker.from>192.168.154.11:50000/jdk1.8</docker.from>
+        <docker.entrypoint>["java","-jar","/${project.build.finalName}.jar"]</docker.entrypoint>
     </properties>
 
     <build>
         <pluginManagement>
             <plugins>
+                <!--docker自动发布插件-->
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.maven.plugin.version}</version>
+                    <configuration>
+                        <dockerHost>${docker.host}</dockerHost><!--docker服务器-->
+                        <imageName>${docker.imageName}</imageName><!--镜像名称-->
+                        <baseImage>${docker.from}</baseImage><!--FROM-->
+                        <entryPoint>${docker.entrypoint}</entryPoint><!--ENTRYPOINT-->
+                        <resources><!--ADD-->
+                            <resource>
+                                <targetPath>/</targetPath>
+                                <directory>${project.build.directory}</directory>
+                                <include>${project.build.finalName}.jar</include>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </plugin>
                 <!--maven-compiler-plugin用来编译Java代码-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -80,6 +104,14 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring.boot.dependencies.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <!--重新打包为可运行jar包，必须！-->
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <!--级联修改pom的版本-->
                 <plugin>

@@ -59,6 +59,7 @@
         <jdk.version>1.8</jdk.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <docker.maven.plugin.version>1.2.2</docker.maven.plugin.version>
+        <maven.jar.plugin.version>3.1.2</maven.jar.plugin.version>
         <spring.boot.dependencies.version>2.1.8.RELEASE</spring.boot.dependencies.version>
         <docker.host>http://192.168.154.11:52375</docker.host>
         <docker.imageName>192.168.154.11:50000/${project.artifactId}:${project.version}</docker.imageName>
@@ -112,6 +113,12 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <!--打jar包插件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven.jar.plugin.version}</version>
                 </plugin>
                 <!--级联修改pom的版本-->
                 <plugin>

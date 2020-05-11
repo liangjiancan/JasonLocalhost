@@ -73,10 +73,10 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
-                        <mainifest>
+                        <manifest>
                             <!--指定main方法所在的类，必须-->
                             <mainClass>${springboot.mainclass}</mainClass>
-                        </mainifest>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>

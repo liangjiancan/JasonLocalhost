@@ -55,10 +55,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<configuration>-->
+                <configuration>
                     <!--指定main方法所在的类，必须-->
-                    <!--<mainClass>${springboot.mainclass}</mainClass>-->
-                <!--</configuration>-->
+                    <mainClass>${springboot.mainclass}</mainClass>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -67,19 +67,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addDefaultImplementationEntries>false</addDefaultImplementationEntries>
-                            <!--指定main方法所在的类，必须-->
-                            <mainClass>${springboot.mainclass}</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
         </plugins>
     </build>

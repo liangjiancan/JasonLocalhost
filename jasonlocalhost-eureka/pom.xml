@@ -74,8 +74,9 @@
                 <configuration>
                     <archive>
                         <manifest>
+                            <addDefaultImplementationEntries>false</addDefaultImplementationEntries>
                             <!--指定main方法所在的类，必须-->
-                            <mainClass>${springboot.mainclass}</mainClass>
+                            <!--<mainClass>${springboot.mainclass}</mainClass>-->
                         </manifest>
                     </archive>
                 </configuration>

@@ -63,6 +63,14 @@
                     <!--指定main方法所在的类，必须-->
                     <mainClass>${springboot.mainclass}</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--重新打包为可运行jar包，必须！-->
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

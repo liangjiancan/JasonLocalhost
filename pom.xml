@@ -27,19 +27,23 @@
         <profile>
             <id>dev</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <profile.active>dev</profile.active>
+                <apollo.configService>http://192.168.154.11:58080</apollo.configService>
+                <apollo.env>DEV</apollo.env>
             </properties>
         </profile>
         <profile>
             <id>test</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <profile.active>test</profile.active>
+                <apollo.configService>http://192.168.154.11:58080</apollo.configService>
+                <apollo.env>TEST</apollo.env>
             </properties>
         </profile>
         <profile>
@@ -49,6 +53,8 @@
             </activation>
             <properties>
                 <profile.active>prod</profile.active>
+                <apollo.configService>http://192.168.154.11:58080</apollo.configService>
+                <apollo.env>PROD</apollo.env>
             </properties>
         </profile>
     </profiles>
@@ -64,7 +70,7 @@
         <docker.host>http://192.168.154.11:52375</docker.host>
         <docker.imageName>192.168.154.11:50000/${project.artifactId}:${project.version}</docker.imageName>
         <docker.from>192.168.154.11:50000/jdk1.8</docker.from>
-        <docker.entrypoint>["java","-jar","/${project.build.finalName}.jar"]</docker.entrypoint>
+        <docker.entrypoint>["java","-jar","/${project.build.finalName}.jar","--spring.profiles.active=${profile.active}"]</docker.entrypoint>
     </properties>
 
     <build>
@@ -80,6 +86,10 @@
                         <imageName>${docker.imageName}</imageName><!--镜像名称-->
                         <baseImage>${docker.from}</baseImage><!--FROM-->
                         <entryPoint>${docker.entrypoint}</entryPoint><!--ENTRYPOINT-->
+                        <env><!--ENV-->
+                            <APOLLO_CONFIGSERVICE>${apollo.configService}</APOLLO_CONFIGSERVICE>
+                            <ENV>${apollo.env}</ENV>
+                        </env>
                         <resources><!--ADD-->
                             <resource>
                                 <targetPath>/</targetPath>
@@ -116,9 +126,9 @@
                 </plugin>
                 <!--打jar包插件-->
                 <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-jar-plugin</artifactId>-->
-                    <!--<version>${maven.jar.plugin.version}</version>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-jar-plugin</artifactId>-->
+                <!--<version>${maven.jar.plugin.version}</version>-->
                 <!--</plugin>-->
                 <!--级联修改pom的版本-->
                 <plugin>

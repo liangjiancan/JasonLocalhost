@@ -16,6 +16,6 @@ apollo:
         namespaces: application # 指定需要加载的命名空间的配置
 
 server:
-    port: 50101 # 项目端口号
+    port: 50001 # 项目端口号
 
 

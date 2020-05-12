@@ -16,7 +16,7 @@
 
     <properties>
         <springboot.mainclass>com.jason.jlh.management.run.JlhManagementWebApplication</springboot.mainclass>
-        <server.port>50001</server.port>
+        <server.port>50101</server.port>
     </properties>
 
     <dependencyManagement>

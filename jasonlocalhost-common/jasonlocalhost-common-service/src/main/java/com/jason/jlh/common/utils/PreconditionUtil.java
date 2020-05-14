@@ -31,7 +31,7 @@ public class PreconditionUtil {
      * @date: 2020/4/20
      */
     public static void checkNotBlank(CharSequence content) {
-        checkNotBlank(content, "参数不能为空");
+        checkNotBlank(content, "操作失败, 参数不能为空");
     }
 
     /**
@@ -69,7 +69,7 @@ public class PreconditionUtil {
      * @date: 2020/4/20
      */
     public static void checkNotNull(Object obj) {
-        checkNotNull(obj, "参数不能为空");
+        checkNotNull(obj, "操作失败, 参数不能为空");
     }
 
     /**
@@ -107,7 +107,7 @@ public class PreconditionUtil {
      * @date: 2020/4/21
      */
     public static void checkNotEmpty(Collection collection) {
-        checkNotEmpty(collection, "参数不能为空");
+        checkNotEmpty(collection, "操作失败, 参数不能为空");
     }
 
     /**
@@ -145,7 +145,7 @@ public class PreconditionUtil {
      * @date: 2020/4/21
      */
     public static void checkNotEmpty(Map map) {
-        checkNotEmpty(map, "参数不能为空");
+        checkNotEmpty(map, "操作失败, 参数不能为空");
     }
 
     /**
@@ -183,7 +183,7 @@ public class PreconditionUtil {
      * @date: 2020/4/23
      */
     public static void checkArgument(boolean expression) {
-        checkArgument(expression, "校验不通过");
+        checkArgument(expression, "操作失败, 校验不通过");
     }
 
     /**

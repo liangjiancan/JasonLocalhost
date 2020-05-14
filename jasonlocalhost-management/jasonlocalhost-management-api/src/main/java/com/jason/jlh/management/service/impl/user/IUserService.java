@@ -13,13 +13,4 @@ import com.jason.jlh.management.dto.user.UserDTO;
  */
 public interface IUserService extends IBaseService {
 
-    /**
-     * 根据主键获取用户信息
-     * 
-     * @param: [id]
-     * @return: com.jason.jlh.management.pojo.user.UserDTO
-     * @author: huyongjun
-     * @date: 2020/5/3
-     */
-    UserDTO queryById(String id);
 }

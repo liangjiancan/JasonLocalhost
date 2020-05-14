@@ -1,0 +1,86 @@
+package com.jason.jlh.common.service;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jason.jlh.common.pojo.BaseDTO;
+import com.jason.jlh.common.pojo.BaseEntity;
+import com.jason.jlh.common.utils.PreconditionUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+/**
+ * @title: AbstractMapperService
+ * @package: com.jason.jlh.common.service
+ * @description: CURD服务实现类抽象类
+ * @author: huyongjun
+ * @date: 2020/5/14
+ * @version: v1.0
+ */
+@SuppressWarnings("unchecked")
+public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
+        extends AbstractConverterService<Dto, Entity> {
+
+    @Autowired
+    protected Mapper mapper;
+
+    private static final String TABLE_COLUMN_ID = "id";
+
+    /**
+     * 根据主键查询
+     *
+     * @param: [id]
+     * @return: Dto
+     * @author: huyongjun
+     * @date: 2020/5/14
+     */
+    protected Dto selectById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
+        return toDto((Entity) mapper.selectById(id));
+    }
+
+    /**
+     * 新增
+     *
+     * @param: [dto]
+     * @return: Dto
+     * @author: huyongjun
+     * @date: 2020/5/14
+     */
+    protected Dto insert(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+        Entity entity = toEntity(dto);
+        boolean success = retBool(mapper.insert(entity));
+        PreconditionUtil.checkArgument(success, "操作失败");
+        return toDto(entity);
+    }
+
+    /**
+     * 根据主键更新
+     *
+     * @param: [dto]
+     * @return: Dto
+     * @author: huyongjun
+     * @date: 2020/5/14
+     */
+    protected Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+        PreconditionUtil.checkNotNull(dto);
+        Entity entity = toEntity(dto);
+        boolean success = retBool(mapper.updateById(entity));
+        PreconditionUtil.checkArgument(success, "操作失败");
+        return toDto(entity);
+    }
+
+    /**
+     * 根据主键删除
+     *
+     * @param: [id]
+     * @return: boolean
+     * @author: huyongjun
+     * @date: 2020/5/14
+     */
+    protected boolean deleteById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
+        boolean success = retBool(mapper.deleteById(id));
+        PreconditionUtil.checkArgument(success, "操作失败");
+        return true;
+    }
+
+}

@@ -42,7 +42,7 @@
             </activation>
             <properties>
                 <profile.active>test</profile.active>
-                <apollo.configService>http://192.168.154.11:58080</apollo.configService>
+                <apollo.configService>http://192.168.154.11:58180</apollo.configService>
                 <apollo.env>TEST</apollo.env>
             </properties>
         </profile>
@@ -53,7 +53,7 @@
             </activation>
             <properties>
                 <profile.active>prod</profile.active>
-                <apollo.configService>http://192.168.154.11:58080</apollo.configService>
+                <apollo.configService>http://192.168.154.11:58180</apollo.configService>
                 <apollo.env>PROD</apollo.env>
             </properties>
         </profile>

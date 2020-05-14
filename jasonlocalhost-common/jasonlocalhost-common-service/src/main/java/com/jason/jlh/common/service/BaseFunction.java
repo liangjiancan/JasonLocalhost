@@ -2,16 +2,17 @@ package com.jason.jlh.common.service;
 
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.jason.jlh.common.exception.ServiceException;
+import org.springframework.aop.framework.AopContext;
 
 /**
- * @title: IBaseFunction
+ * @title: BaseFunction
  * @package: com.jason.jlh.common.service
  * @description: 提供一些基本方法
  * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IBaseFunction {
+public interface BaseFunction {
 
     /**
      * 获取用户名
@@ -109,4 +110,18 @@ public interface IBaseFunction {
         return new ServiceException(message);
     }
 
+    /**
+     * 获得自身的代理
+     * 自身的非事务方法调用自身的事务方法时不会开启事务, 需要通过调用自身的代理来开启事务
+     * ITrEmployeeService that = that(); that.insert(xxx) //转换成接口，调用public方法
+     * TrEmployeeService that = that(); that.insert(xxx) //转换成实现，调用非接口的public方法
+     *
+     * @param: []
+     * @return: T
+     * @author:
+     * @date: 2020/5/3
+     */
+    default <T> T that() {
+        return (T) AopContext.currentProxy();
+    }
 }

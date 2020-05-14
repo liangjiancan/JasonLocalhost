@@ -13,7 +13,7 @@ import java.lang.reflect.ParameterizedType;
 /**
  * @title: AbstractConverterService
  * @package: com.jason.jlh.common.service
- * @description: 对象转换服务实现类抽象类
+ * @description: 对象转换服务抽象类
  * @author: huyongjun
  * @date: 2020/5/14
  * @version: v1.0

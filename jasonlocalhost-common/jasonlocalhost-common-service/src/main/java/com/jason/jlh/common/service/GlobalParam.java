@@ -131,7 +131,7 @@ public class GlobalParam implements IGlobalParam {
         if (user == null) {
             // 获取用户信息
             IUserService userService = SpringContextUtil.getBean(IUserService.class);
-            user = userService.queryById(userId);
+            user = userService.selectById(userId);
         }
         return user;
     }

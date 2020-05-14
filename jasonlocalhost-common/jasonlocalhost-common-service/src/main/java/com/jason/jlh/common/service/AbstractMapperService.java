@@ -12,14 +12,15 @@ import javax.validation.constraints.NotNull;
 /**
  * @title: AbstractMapperService
  * @package: com.jason.jlh.common.service
- * @description: CURD服务实现类抽象类
+ * @description: CURD服务抽象类
  * @author: huyongjun
  * @date: 2020/5/14
  * @version: v1.0
  */
 @SuppressWarnings("unchecked")
 public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
-        extends AbstractConverterService<Dto, Entity> {
+        extends AbstractConverterService<Dto, Entity>
+        implements IMapperService<Dto> {
 
     @Autowired
     protected Mapper mapper;
@@ -34,7 +35,8 @@ public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends 
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    protected Dto selectById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
+    @Override
+    public Dto selectById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
         return toDto((Entity) mapper.selectById(id));
     }
 
@@ -46,7 +48,8 @@ public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends 
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    protected Dto insert(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+    @Override
+    public Dto insert(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.insert(entity));
         PreconditionUtil.checkArgument(success, "操作失败");
@@ -61,7 +64,8 @@ public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends 
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    protected Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+    @Override
+    public Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
         PreconditionUtil.checkNotNull(dto);
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.updateById(entity));
@@ -77,7 +81,8 @@ public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends 
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    protected boolean deleteById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
+    @Override
+    public boolean deleteById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
         boolean success = retBool(mapper.deleteById(id));
         PreconditionUtil.checkArgument(success, "操作失败");
         return true;

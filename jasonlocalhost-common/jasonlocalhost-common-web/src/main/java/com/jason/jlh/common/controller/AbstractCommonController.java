@@ -19,11 +19,4 @@ public abstract class AbstractCommonController<IService extends IBaseService> im
     @Autowired
     IService service;
 
-    /**
-     * 常用常量
-     */
-    protected static final YesornoEnum Yes = YesornoEnum.Yes;
-    protected static final YesornoEnum No = YesornoEnum.No;
-
-
 }

@@ -156,7 +156,6 @@ public class ContextHolder implements IGlobalParam {
         }
     }
 
-
     /**
      * 是否管理员
      *

@@ -16,7 +16,7 @@ public interface ExtendMapper<Entity> extends BaseMapper<Entity> {
 
     /**
      * 全字段更新, 包括空值的字段
-     * 由于BaseMapper的updateById方法不更新空值的字段, 故提供此方法
+     * 由于BaseMapper的updateById方法不更新空值的字段, 所以有必要提供此方法
      *
      * @param: [entity]
      * @return: int

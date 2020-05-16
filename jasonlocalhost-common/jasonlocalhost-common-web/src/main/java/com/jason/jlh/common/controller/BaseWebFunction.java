@@ -1,5 +1,6 @@
 package com.jason.jlh.common.controller;
 
+import com.jason.jlh.common.enums.YesornoEnum;
 import com.jason.jlh.common.exception.WebException;
 
 /**
@@ -11,6 +12,12 @@ import com.jason.jlh.common.exception.WebException;
  * @version: v1.0
  */
 public interface BaseWebFunction {
+
+    /**
+     * 常用常量
+     */
+    YesornoEnum Yes = YesornoEnum.Yes;
+    YesornoEnum No = YesornoEnum.No;
 
     /**
      * 统一抛出WebException异常方法

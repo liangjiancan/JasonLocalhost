@@ -64,7 +64,6 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
      */
     @Override
     public Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
-        PreconditionUtil.checkNotNull(dto);
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.updateById(entity));
         PreconditionUtil.checkArgument(success, "操作失败");

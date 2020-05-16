@@ -75,7 +75,8 @@ public class UpdateAllColumnById extends AbstractMethod {
     }
 
     /**
-     * 获取所有的SET语句, 忽略if标签使得空值字段也进行设置处理
+     * 获取所有的SET语句, 忽略if标签使得空值字段也进行设值处理
+     * MyBatis-plus的updateById会对每个字段增加if标签判断是否为空值, 为空的字段则不进行update, 所以只需要忽略if标签即可达成全字段update
      *
      * @param: [table, ignoreLogicDelFiled, prefix]
      * @return: java.lang.String

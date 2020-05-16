@@ -6,6 +6,7 @@ import com.jason.jlh.common.enums.YesornoEnum;
 import com.jason.jlh.common.exception.ServiceException;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.ParameterizedType;
@@ -24,14 +25,9 @@ public abstract class AbstractConverterService<Dto extends BaseDTO, Entity exten
         implements BaseService, BaseServiceFunction, IConverter<Dto, Entity> {
 
     /**
-     * 常用常量
-     */
-    protected static final YesornoEnum Yes = YesornoEnum.Yes;
-    protected static final YesornoEnum No = YesornoEnum.No;
-
-    /**
      * Service上主要的Dto和Entity转换工具
      */
+    @Getter
     protected Converter<Dto, Entity> converter = null;
 
     private Class<Dto> clazzDto = null;
@@ -48,18 +44,6 @@ public abstract class AbstractConverterService<Dto extends BaseDTO, Entity exten
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-    }
-
-    /**
-     * 获取转换者对象
-     *
-     * @param: []
-     * @return: com.jason.jlh.common.converter.Converter
-     * @author:
-     * @date: 2020/5/3
-     */
-    public Converter<Dto, Entity> getConverter() {
-        return converter;
     }
 
     /**

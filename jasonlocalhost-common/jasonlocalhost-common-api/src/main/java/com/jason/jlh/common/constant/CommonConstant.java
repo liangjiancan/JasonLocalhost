@@ -18,5 +18,7 @@ public interface CommonConstant {
     String TABLE_COLUMN_MODIFIED_BY_ID = "modified_by_id";
     String TABLE_COLUMN_MODIFIED_TIME = "modified_time";
     String TABLE_COLUMN_CREATED_TIME = "created_time";
+    String TABLE_COLUMN_DELETED = "deleted";
+    String TABLE_COLUMN_VERSION = "version";
 
 }

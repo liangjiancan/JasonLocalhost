@@ -1,6 +1,7 @@
 package com.jason.jlh.common.service;
 
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
+import com.jason.jlh.common.enums.YesornoEnum;
 import com.jason.jlh.common.exception.ServiceException;
 import com.jason.jlh.common.pojo.GlobalParam;
 import org.springframework.aop.framework.AopContext;
@@ -14,6 +15,12 @@ import org.springframework.aop.framework.AopContext;
  * @version: v1.0
  */
 public interface BaseServiceFunction {
+
+    /**
+     * 常用常量
+     */
+    YesornoEnum Yes = YesornoEnum.Yes;
+    YesornoEnum No = YesornoEnum.No;
 
     /**
      * 获取用户名

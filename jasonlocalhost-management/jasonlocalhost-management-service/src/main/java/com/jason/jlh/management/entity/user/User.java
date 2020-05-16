@@ -66,4 +66,10 @@ public class User extends BaseEntity {
     @TableLogic
     private Integer deleted;
 
+    /**
+     * 版本号
+     */
+    @Version
+    private Integer version;
+
 }

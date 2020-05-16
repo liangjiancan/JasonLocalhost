@@ -1,8 +1,11 @@
 package com.jason.jlh.common.pojo;
 
-import javax.validation.groups.Default;
+import io.swagger.annotations.ApiModelProperty;
 
- /**
+import javax.validation.groups.Default;
+import java.time.LocalDateTime;
+
+/**
  * @title: BaseValueObject
  * @package: com.jason.jlh.common.pojo
  * @description: DTO基类
@@ -26,4 +29,27 @@ public abstract class BaseDTO extends BaseValueObject {
     public interface Update extends Default {
     }
 
+     /**
+      * 修改人
+      */
+     @ApiModelProperty(value = "修改人")
+     private String modifiedBy;
+
+     /**
+      * 修改人ID
+      */
+     @ApiModelProperty(value = "修改人ID")
+     private String modifiedById;
+
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(value = "创建时间")
+    private LocalDateTime createdTime;
+
+    /**
+     * 修改时间
+     */
+    @ApiModelProperty(value = "修改时间")
+    private LocalDateTime modifiedTime;
 }

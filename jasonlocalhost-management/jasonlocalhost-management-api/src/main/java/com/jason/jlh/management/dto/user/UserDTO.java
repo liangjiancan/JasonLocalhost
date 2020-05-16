@@ -69,14 +69,14 @@ public class UserDTO extends BaseDTO {
     private Integer sex;
 
     /**
-     * 创建时间
+     * 是否已删除
      */
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createdTime;
+    @ApiModelProperty(value = "是否已删除")
+    private Integer deleted;
 
     /**
-     * 修改时间
+     * 版本号
      */
-    @ApiModelProperty(value = "修改时间")
-    private LocalDateTime modifiedTime;
+    @ApiModelProperty(value = "版本号")
+    private Integer version;
 }

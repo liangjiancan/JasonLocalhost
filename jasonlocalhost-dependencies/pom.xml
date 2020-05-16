@@ -320,6 +320,12 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+            <!--热部署配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>${spring.boot.dependencies.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

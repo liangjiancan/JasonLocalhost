@@ -1,4 +1,4 @@
-package com.jason.jlh.common.service;
+package com.jason.jlh.common.pojo;
 
 import javax.validation.constraints.NotBlank;
 import java.util.Map;

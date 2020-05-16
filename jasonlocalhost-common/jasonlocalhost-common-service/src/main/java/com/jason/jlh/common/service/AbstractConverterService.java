@@ -21,7 +21,7 @@ import java.lang.reflect.ParameterizedType;
 @Slf4j
 @SuppressWarnings("unchecked")
 public abstract class AbstractConverterService<Dto extends BaseDTO, Entity extends BaseEntity>
-        implements BaseService, BaseFunction, IConverter<Dto, Entity> {
+        implements BaseService, BaseServiceFunction, IConverter<Dto, Entity> {
 
     /**
      * 常用常量

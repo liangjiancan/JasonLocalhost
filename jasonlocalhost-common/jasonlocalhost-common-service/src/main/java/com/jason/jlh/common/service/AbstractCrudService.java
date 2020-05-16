@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @title: AbstractMapperService
+ * @title: AbstractCrudService
  * @package: com.jason.jlh.common.service
  * @description: CURD服务抽象类
  * @author: huyongjun
@@ -18,14 +18,12 @@ import javax.validation.constraints.NotNull;
  * @version: v1.0
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractMapperService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
+public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
         extends AbstractConverterService<Dto, Entity>
-        implements IMapperService<Dto> {
+        implements ICrudService<Dto> {
 
     @Autowired
     protected Mapper mapper;
-
-    private static final String TABLE_COLUMN_ID = "id";
 
     /**
      * 根据主键查询

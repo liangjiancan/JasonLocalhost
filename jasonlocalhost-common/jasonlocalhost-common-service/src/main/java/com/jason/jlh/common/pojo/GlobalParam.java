@@ -1,4 +1,4 @@
-package com.jason.jlh.common.service;
+package com.jason.jlh.common.pojo;
 
 import com.jason.jlh.common.utils.SpringContextUtil;
 import com.jason.jlh.management.enums.user.UsertypeEnum;
@@ -19,6 +19,11 @@ import java.util.Map;
  */
 @Data
 public class GlobalParam implements IGlobalParam {
+
+    /**
+     * 线程安全对象
+     */
+    private static final ThreadLocal<GlobalParam> LOCAL = ThreadLocal.withInitial(() -> new GlobalParam());
 
     /**
      * 服务类名
@@ -71,15 +76,10 @@ public class GlobalParam implements IGlobalParam {
     private Map<String, Object> data;
 
     /**
-     * 线程安全对象
-     */
-    private static final ThreadLocal<GlobalParam> LOCAL = ThreadLocal.withInitial(() -> new GlobalParam());
-
-    /**
      * 获取当前的全局参数
      *
      * @param: []
-     * @return: com.jason.jlh.common.service.IGlobalParam
+     * @return: com.jason.jlh.common.pojo.IGlobalParam
      * @author:
      * @date: 2020/5/3
      */

@@ -1,6 +1,7 @@
 package com.jason.jlh.management.dao.user;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jason.jlh.common.dao.ExtendMapper;
 import com.jason.jlh.management.entity.user.User;
 
 /**
@@ -11,5 +12,5 @@ import com.jason.jlh.management.entity.user.User;
  * @date: 2020/5/4
  * @version: v1.0
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends ExtendMapper<User> {
 }

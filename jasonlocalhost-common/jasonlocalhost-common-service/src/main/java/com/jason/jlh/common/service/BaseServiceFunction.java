@@ -2,17 +2,18 @@ package com.jason.jlh.common.service;
 
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.jason.jlh.common.exception.ServiceException;
+import com.jason.jlh.common.pojo.GlobalParam;
 import org.springframework.aop.framework.AopContext;
 
 /**
- * @title: BaseFunction
+ * @title: BaseServiceFunction
  * @package: com.jason.jlh.common.service
- * @description: 提供一些基本方法
+ * @description: 提供一些Service层的通用方法
  * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface BaseFunction {
+public interface BaseServiceFunction {
 
     /**
      * 获取用户名

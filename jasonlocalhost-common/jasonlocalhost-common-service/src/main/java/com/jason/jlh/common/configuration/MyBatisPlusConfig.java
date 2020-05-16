@@ -1,4 +1,4 @@
-package com.jason.jlh.common.configuation;
+package com.jason.jlh.common.configuration;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @title: MyBatisPlusConfig
- * @package: com.jason.jlh.common.configuation
+ * @package: com.jason.jlh.common.configuration
  * @description: MyBatis-plus配置类
  * @author: huyongjun
  * @date: 2020/5/16

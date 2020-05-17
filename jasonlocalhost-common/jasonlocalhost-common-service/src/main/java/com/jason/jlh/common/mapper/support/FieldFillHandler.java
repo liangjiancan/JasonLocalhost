@@ -1,4 +1,4 @@
-package com.jason.jlh.common.dao.support;
+package com.jason.jlh.common.mapper.support;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.jason.jlh.common.pojo.GlobalParam;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * @title: FieldFillHandler
- * @package: com.jason.jlh.common.dao.support
+ * @package: com.jason.jlh.common.mapper.support
  * @description: 字段填充处理器
  * @author: huyongjun
  * @date: 2020/5/16

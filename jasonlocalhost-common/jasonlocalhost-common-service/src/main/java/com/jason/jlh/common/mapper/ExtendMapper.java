@@ -1,4 +1,4 @@
-package com.jason.jlh.common.dao;
+package com.jason.jlh.common.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * @title: ExtendMapper
- * @package: com.jason.jlh.common.dao
+ * @package: com.jason.jlh.common.mapper
  * @description: 基于MyBatis-plus的Mapper基类的增强Mapper, 提供额外的方法
  * @author: huyongjun
  * @date: 2020/5/16

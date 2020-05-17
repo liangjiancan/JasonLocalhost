@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IComparableEnum<T extends Serializable> extends IEnum<T> {
+public interface IComparableEnum<T extends Serializable> extends IBaseEnum<T> {
 
     /**
      * 判断枚举值是否一致

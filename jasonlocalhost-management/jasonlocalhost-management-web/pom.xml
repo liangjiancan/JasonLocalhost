@@ -15,7 +15,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <springboot.mainclass>com.jason.jlh.management.run.JlhManagementWebApplication</springboot.mainclass>
+        <springboot.mainclass>com.jason.jlh.management.JlhManagementWebApplication</springboot.mainclass>
         <server.port>50001</server.port>
     </properties>
 

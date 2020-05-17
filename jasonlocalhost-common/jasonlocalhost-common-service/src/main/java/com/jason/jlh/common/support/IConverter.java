@@ -1,4 +1,4 @@
-package com.jason.jlh.common.converter;
+package com.jason.jlh.common.support;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * @title: IConverter
- * @package: com.jason.jlh.common.service
+ * @package: com.jason.jlh.common.support
  * @description: Dto和Entity转换类接口
  * @author:
  * @date: 2020/5/3

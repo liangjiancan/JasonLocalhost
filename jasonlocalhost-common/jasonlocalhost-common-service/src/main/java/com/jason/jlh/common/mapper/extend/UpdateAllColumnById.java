@@ -1,4 +1,4 @@
-package com.jason.jlh.common.dao.extend;
+package com.jason.jlh.common.mapper.extend;
 
 import com.baomidou.mybatisplus.core.enums.SqlMethod;
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 /**
  * @title: UpdateAllColumnById
- * @package: com.jason.jlh.common.dao.extend
+ * @package: com.jason.jlh.common.mapper.extend
  * @description: updateAllColumnById方法定义类
  * @author: huyongjun
  * @date: 2020/5/16

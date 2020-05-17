@@ -2,7 +2,7 @@ package com.jason.jlh.common.configuration;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.jason.jlh.common.dao.extend.ExtendSqlInjector;
+import com.jason.jlh.common.mapper.extend.ExtendSqlInjector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,7 +21,7 @@ public class MyBatisPlusConfig {
      * 扩展Mapper方法注入器
      *
      * @param: []
-     * @return: com.jason.jlh.common.dao.extend.ExtendSqlInjector
+     * @return: com.jason.jlh.common.mapper.extend.ExtendSqlInjector
      * @author: huyongjun
      * @date: 2020/5/16
      */

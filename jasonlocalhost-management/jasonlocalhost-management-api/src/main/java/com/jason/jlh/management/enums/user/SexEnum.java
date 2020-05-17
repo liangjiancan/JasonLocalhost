@@ -1,6 +1,7 @@
-package com.jason.jlh.common.enums;
+package com.jason.jlh.management.enums.user;
 
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.jason.jlh.common.enums.IComparableEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -8,38 +9,37 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * @title: YesornoEnum
- * @package: com.jason.jlh.common.enums
- * @description: 是否枚举类
+ * @title: SexEnum
+ * @package: com.jason.jlh.management.enums.user
+ * @description: 性别枚举类
  * @author: huyongjun
- * @date: 2020/5/16
+ * @date: 2020/5/3
  * @version: v1.0
  */
 @Getter
 @ToString
 @AllArgsConstructor
-@ApiModel("global.yesorno(是否)枚举类")
-public enum YesornoEnum implements IComparableEnum<Integer> {
+@ApiModel("management.sex 性别枚举类")
+public enum SexEnum implements IComparableEnum<Integer> {
 
     /**
-     * 否
+     * 女
      */
-    @ApiModelProperty("否")
-    No(0, "否"),
+    @ApiModelProperty("女")
+    ADMIN(0, "女"),
 
     /**
-     * 是
+     * 男
      */
-    @ApiModelProperty("是")
-    Yes(1, "是");
+    @ApiModelProperty("男")
+    USER(1, "男");
 
     private Integer value;
-
     @JsonValue
     private String desc;
 
     public static String getDescByValue(Integer value) {
-        for (YesornoEnum item : values()) {
+        for (SexEnum item : values()) {
             if (item.getValue().equals(value)) {
                 return item.getDesc();
             }

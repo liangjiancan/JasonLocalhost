@@ -15,7 +15,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <springboot.mainclass>com.jason.jlh.management.run.JlhManagementServiceApplication</springboot.mainclass>
+        <springboot.mainclass>com.jason.jlh.management.JlhManagementServiceApplication</springboot.mainclass>
     </properties>
 
     <dependencyManagement>

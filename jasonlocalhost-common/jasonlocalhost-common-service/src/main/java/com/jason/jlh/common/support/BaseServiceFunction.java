@@ -1,4 +1,4 @@
-package com.jason.jlh.common.service;
+package com.jason.jlh.common.support;
 
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.jason.jlh.common.enums.YesornoEnum;
@@ -8,7 +8,7 @@ import org.springframework.aop.framework.AopContext;
 
 /**
  * @title: BaseServiceFunction
- * @package: com.jason.jlh.common.service
+ * @package: com.jason.jlh.common.support
  * @description: 提供一些Service层的通用方法
  * @author:
  * @date: 2020/5/3

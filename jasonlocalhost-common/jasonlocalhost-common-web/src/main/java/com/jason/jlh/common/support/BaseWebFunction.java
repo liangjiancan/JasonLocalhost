@@ -1,11 +1,11 @@
-package com.jason.jlh.common.controller;
+package com.jason.jlh.common.support;
 
 import com.jason.jlh.common.enums.YesornoEnum;
 import com.jason.jlh.common.exception.WebException;
 
 /**
  * @title: BaseWebFunction
- * @package: com.jason.jlh.common.controller
+ * @package: com.jason.jlh.common.support
  * @description: 提供一些Web层的通用方法
  * @author: huyongjun
  * @date: 2020/5/14

@@ -79,13 +79,15 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      */
     @Bean
     public ObjectMapper objectMapper() {
-        ObjectMapper om = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
         // 如果json字段比较多，而我们对象只需要部分字段，这时反序列化时会报错，加入该配置可解决
-        om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        // 设置序列化枚举时使用枚举的toString方法
+        // objectMapper.configure(SerializationFeature.WRITE_ENUMS_USING_TO_STRING, true);
         // 设置默认的Date类型转换
-        om.setDateFormat(new SimpleDateFormat(DateTimeConstant.DATE_TIME_FORMAT));
+        objectMapper.setDateFormat(new SimpleDateFormat(DateTimeConstant.DATE_TIME_FORMAT));
         // 设置时区
-        om.setTimeZone(TimeZone.getDefault());
+        objectMapper.setTimeZone(TimeZone.getDefault());
         // 创建Java时间模块, 设置默认的LocalDateTime的序列化和反序列化器
         JavaTimeModule javaTimeModule = new JavaTimeModule();
         // 配置序列化器
@@ -96,14 +98,14 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ofPattern(DateTimeConstant.DATE_TIME_FORMAT)));
         javaTimeModule.addDeserializer(LocalDate.class, new LocalDateDeserializer(DateTimeFormatter.ofPattern(DateTimeConstant.DATE_FORMAT)));
         javaTimeModule.addDeserializer(LocalTime.class, new LocalTimeDeserializer(DateTimeFormatter.ofPattern(DateTimeConstant.TIME_FORMAT)));
-        om.registerModule(javaTimeModule);
+        objectMapper.registerModule(javaTimeModule);
         // 配置字符串反序列化器
         SimpleModule module = new SimpleModule();
         module.addDeserializer(String.class, new TrimStringDeserializer());
-        om.registerModule(module);
+        objectMapper.registerModule(module);
         // 注册一个带有SerializerModifier的Factory, 配置Json反序列化忽略修正器
-        om.setSerializerFactory(om.getSerializerFactory().withSerializerModifier(new JsonDeserializationIgnoreModifier()));
-        return om;
+        objectMapper.setSerializerFactory(objectMapper.getSerializerFactory().withSerializerModifier(new JsonDeserializationIgnoreModifier()));
+        return objectMapper;
     }
 
     /**

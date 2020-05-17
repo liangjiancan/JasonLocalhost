@@ -14,9 +14,9 @@ import java.util.Map;
 
 /**
  * @title: SpringContextUtil
- * @package: com.jason.jlh.common.service
+ * @package: com.jason.jlh.common.utils
  * @description: spring上下文工具类
- * @author: 
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */
@@ -32,7 +32,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [applicationContext]
      * @return: void
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     @Override
@@ -48,7 +48,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: []
      * @return: org.springframework.context.ApplicationContext
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static ApplicationContext getApplicationContext() {
@@ -60,7 +60,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [name]
      * @return: java.lang.Object
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static Object getBean(String name) {
@@ -72,7 +72,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [clazz]
      * @return: T
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static <T> T getBean(Class<T> clazz) {
@@ -84,7 +84,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [name, clazz]
      * @return: T
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static <T> T getBean(String name, Class<T> clazz) {
@@ -96,7 +96,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [key]
      * @return: java.lang.String
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static String getConfigProperty(String key) {
@@ -108,7 +108,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanName]
      * @return: boolean
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static boolean containsBean(String beanName) {
@@ -120,7 +120,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanName]
      * @return: boolean
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static boolean isSingleton(String beanName) {
@@ -132,7 +132,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanName]
      * @return: java.lang.Class<?>
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static Class<?> getType(String beanName) {
@@ -144,7 +144,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanName]
      * @return: java.lang.String[]
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static String[] getAliases(String beanName) {
@@ -156,7 +156,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanName, methodName, params]
      * @return: java.lang.Object
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static Object invokeMethod(String beanName, String methodName, Object[] params) {
@@ -174,7 +174,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      *
      * @param: [beanDef]
      * @return: java.lang.Class
-     * @author: 
+     * @author:
      * @date: 2020/5/3
      */
     public static Class getBeanClass(BeanDefinition beanDef) {
@@ -198,8 +198,8 @@ public class SpringContextUtil implements ApplicationContextAware {
      * 获得特定类型的bean
      *
      * @param: [type]
-     * @return: java.util.Map<java.lang.String   ,   T>
-     * @author: 
+     * @return: java.util.Map
+     * @author:
      * @date: 2020/5/3
      */
     public static <T> Map<String, T> getBeansOfType(Class<T> type) {

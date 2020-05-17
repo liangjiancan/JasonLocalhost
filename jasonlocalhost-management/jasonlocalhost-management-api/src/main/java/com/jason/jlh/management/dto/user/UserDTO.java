@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDateTime;
+import javax.validation.constraints.NotNull;
 
 /**
  * @title: UserDTO
@@ -24,23 +24,27 @@ public class UserDTO extends BaseDTO {
 
     private static final long serialVersionUID = 665633605194309643L;
 
+    public interface Register {
+    }
+
     /**
      * 用户主键
      */
-    @NotBlank(groups = Update.class, message = "用户ID不能为空")
+    @NotBlank(groups = {Update.class}, message = "用户ID不能为空")
     @ApiModelProperty(value = "用户主键")
     private String id;
 
     /**
      * 用户名
      */
-    @NotBlank
+    @NotBlank(groups = {Register.class}, message = "用户名不能为空")
     @ApiModelProperty(value = "用户名")
     private String userName;
 
     /**
      * 邮箱
      */
+    @NotBlank(groups = {Register.class}, message = "邮箱不能为空")
     @ApiModelProperty(value = "邮箱")
     private String email;
 
@@ -65,6 +69,7 @@ public class UserDTO extends BaseDTO {
     /**
      * 性别
      */
+    @NotNull(groups = {Register.class}, message = "性别不能为空")
     @ApiModelProperty(value = "性别")
     private Integer sex;
 

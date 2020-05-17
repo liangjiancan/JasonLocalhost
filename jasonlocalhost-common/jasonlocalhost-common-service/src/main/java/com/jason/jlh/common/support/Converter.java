@@ -1,11 +1,11 @@
-package com.jason.jlh.common.converter;
+package com.jason.jlh.common.support;
 
 import com.jason.jlh.common.pojo.BaseValueObject;
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * @title: Converter
- * @package: com.jason.jlh.common.service
+ * @package: com.jason.jlh.common.support
  * @description: Dto和Entity转换类接口
  * @author:
  * @date: 2020/5/3

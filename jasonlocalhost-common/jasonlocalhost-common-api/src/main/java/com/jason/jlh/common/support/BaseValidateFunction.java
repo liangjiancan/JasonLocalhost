@@ -1,4 +1,4 @@
-package com.jason.jlh.common.utils;
+package com.jason.jlh.common.support;
 
 import com.google.common.base.Strings;
 import com.jason.jlh.common.exception.ServiceException;
@@ -9,18 +9,14 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @title: PreconditionUtil
- * @package: com.csair.meng.engineering.utils
- * @description: 参考Guava的Preconditions的部分方法编写的工具类，提供对字符串、对象和容器的非空校验方法。
- * {@link com.google.common.base.Preconditions}
+ * @title: BaseValidateFunction
+ * @package: com.jason.jlh.common.support
+ * @description: 提供一些通用的校验方法
  * @author: huyongjun
  * @date: 2020/4/20
  * @version: v1.0
  */
-public class PreconditionUtil {
-
-    private PreconditionUtil() {
-    }
+public interface BaseValidateFunction {
 
     /**
      * 断言字符序列内容非且非空字符串, 失败则抛出com.csair.meng.framework.dto.exception.ServiceException
@@ -30,7 +26,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotBlank(CharSequence content) {
+    default void checkNotBlank(CharSequence content) {
         checkNotBlank(content, "操作失败, 参数不能为空");
     }
 
@@ -42,7 +38,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotBlank(CharSequence content, String errorMessage) {
+    default void checkNotBlank(CharSequence content, String errorMessage) {
         checkNotBlank(content, errorMessage, null);
     }
 
@@ -54,7 +50,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotBlank(CharSequence content, String errorMessageTemplate, Object... errorMessageArgs) {
+    default void checkNotBlank(CharSequence content, String errorMessageTemplate, Object... errorMessageArgs) {
         if (StringUtils.isBlank(content)) {
             throw new ServiceException(errorMessageArgs == null ? errorMessageTemplate : Strings.lenientFormat(errorMessageTemplate, errorMessageArgs));
         }
@@ -68,7 +64,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotNull(Object obj) {
+    default void checkNotNull(Object obj) {
         checkNotNull(obj, "操作失败, 参数不能为空");
     }
 
@@ -80,7 +76,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotNull(Object obj, String errorMessage) {
+    default void checkNotNull(Object obj, String errorMessage) {
         checkNotNull(obj, errorMessage, null);
     }
 
@@ -92,7 +88,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/20
      */
-    public static void checkNotNull(Object obj, String errorMessageTemplate, Object... errorMessageArgs) {
+    default void checkNotNull(Object obj, String errorMessageTemplate, Object... errorMessageArgs) {
         if (obj == null) {
             throw new ServiceException(errorMessageArgs == null ? errorMessageTemplate : Strings.lenientFormat(errorMessageTemplate, errorMessageArgs));
         }
@@ -106,7 +102,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Collection collection) {
+    default void checkNotEmpty(Collection collection) {
         checkNotEmpty(collection, "操作失败, 参数不能为空");
     }
 
@@ -118,7 +114,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Collection collection, String errorMessage) {
+    default void checkNotEmpty(Collection collection, String errorMessage) {
         checkNotEmpty(collection, errorMessage, null);
     }
 
@@ -130,7 +126,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Collection collection, String errorMessageTemplate, Object... errorMessageArgs) {
+    default void checkNotEmpty(Collection collection, String errorMessageTemplate, Object... errorMessageArgs) {
         if (CollectionUtils.isEmpty(collection)) {
             throw new ServiceException(errorMessageArgs == null ? errorMessageTemplate : Strings.lenientFormat(errorMessageTemplate, errorMessageArgs));
         }
@@ -144,7 +140,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Map map) {
+    default void checkNotEmpty(Map map) {
         checkNotEmpty(map, "操作失败, 参数不能为空");
     }
 
@@ -156,7 +152,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Map map, String errorMessage) {
+    default void checkNotEmpty(Map map, String errorMessage) {
         checkNotEmpty(map, errorMessage, null);
     }
 
@@ -168,7 +164,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/21
      */
-    public static void checkNotEmpty(Map map, String errorMessageTemplate, Object... errorMessageArgs) {
+    default void checkNotEmpty(Map map, String errorMessageTemplate, Object... errorMessageArgs) {
         if (CollectionUtils.isEmpty(map)) {
             throw new ServiceException(errorMessageArgs == null ? errorMessageTemplate : Strings.lenientFormat(errorMessageTemplate, errorMessageArgs));
         }
@@ -182,7 +178,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/23
      */
-    public static void checkArgument(boolean expression) {
+    default void checkArgument(boolean expression) {
         checkArgument(expression, "操作失败, 校验不通过");
     }
 
@@ -194,7 +190,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/23
      */
-    public static void checkArgument(boolean expression, String errorMessage) {
+    default void checkArgument(boolean expression, String errorMessage) {
         checkArgument(expression, errorMessage, null);
     }
 
@@ -206,7 +202,7 @@ public class PreconditionUtil {
      * @author: huyongjun
      * @date: 2020/4/23
      */
-    public static void checkArgument(boolean expression, String errorMessageTemplate, Object... errorMessageArgs) {
+    default void checkArgument(boolean expression, String errorMessageTemplate, Object... errorMessageArgs) {
         if (!expression) {
             throw new ServiceException(errorMessageArgs == null ? errorMessageTemplate : Strings.lenientFormat(errorMessageTemplate, errorMessageArgs));
         }

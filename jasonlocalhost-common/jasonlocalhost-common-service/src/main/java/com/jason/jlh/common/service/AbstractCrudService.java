@@ -3,7 +3,6 @@ package com.jason.jlh.common.service;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
-import com.jason.jlh.common.utils.PreconditionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.constraints.NotBlank;
@@ -50,7 +49,7 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
     public Dto insert(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.insert(entity));
-        PreconditionUtil.checkArgument(success, "操作失败");
+        checkArgument(success, "操作失败");
         return toDto(entity);
     }
 
@@ -66,7 +65,7 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
     public Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.updateById(entity));
-        PreconditionUtil.checkArgument(success, "操作失败");
+        checkArgument(success, "操作失败");
         return toDto(entity);
     }
 
@@ -81,7 +80,7 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
     @Override
     public boolean deleteById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
         boolean success = retBool(mapper.deleteById(id));
-        PreconditionUtil.checkArgument(success, "操作失败");
+        checkArgument(success, "操作失败");
         return true;
     }
 

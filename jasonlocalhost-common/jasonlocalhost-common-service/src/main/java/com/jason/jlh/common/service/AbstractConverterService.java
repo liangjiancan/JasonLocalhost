@@ -4,6 +4,7 @@ import com.jason.jlh.common.exception.ServiceException;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
 import com.jason.jlh.common.support.BaseServiceFunction;
+import com.jason.jlh.common.support.BaseValidateFunction;
 import com.jason.jlh.common.support.Converter;
 import com.jason.jlh.common.support.IConverter;
 import lombok.Getter;
@@ -22,7 +23,7 @@ import java.lang.reflect.ParameterizedType;
 @Slf4j
 @SuppressWarnings("unchecked")
 public abstract class AbstractConverterService<Dto extends BaseDTO, Entity extends BaseEntity>
-        implements BaseService, BaseServiceFunction, IConverter<Dto, Entity> {
+        implements BaseService, BaseServiceFunction, BaseValidateFunction, IConverter<Dto, Entity> {
 
     /**
      * Service上主要的Dto和Entity转换工具

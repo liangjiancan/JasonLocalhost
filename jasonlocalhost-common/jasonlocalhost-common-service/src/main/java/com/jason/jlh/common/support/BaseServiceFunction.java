@@ -16,6 +16,7 @@ import org.springframework.aop.framework.AopContext;
  */
 public interface BaseServiceFunction {
 
+
     /**
      * 常用常量
      */

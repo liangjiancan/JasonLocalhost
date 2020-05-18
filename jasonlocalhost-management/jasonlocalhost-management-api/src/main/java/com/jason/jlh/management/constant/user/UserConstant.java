@@ -18,6 +18,8 @@ public class UserConstant implements CommonConstant {
     /**
      * tb_user表字段
      */
+    public static final String TABLE_COLUMN_USER_NAME = "user_name";
+    public static final String TABLE_COLUMN_EMAIL = "email";
     public static final String TABLE_COLUMN_NICK_NAME = "nick_name";
 
 }

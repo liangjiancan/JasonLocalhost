@@ -1,5 +1,6 @@
 package com.jason.jlh.management.dto.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jason.jlh.common.pojo.BaseDTO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -8,6 +9,7 @@ import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * @title: UserDTO
@@ -38,8 +40,17 @@ public class UserDTO extends BaseDTO {
      * 用户名
      */
     @NotBlank(groups = {Register.class}, message = "用户名不能为空")
+    @Size(min = 2, max = 22, message = "请填写2到32位的用户名")
     @ApiModelProperty(value = "用户名")
     private String userName;
+
+    /**
+     * 密码
+     */
+    @NotBlank(groups = {Register.class}, message = "密码不能为空")
+    @Size(min = 8, max = 22, message = "请填写8到22位的密码")
+    @ApiModelProperty(value = "密码")
+    private String password;
 
     /**
      * 邮箱
@@ -52,6 +63,7 @@ public class UserDTO extends BaseDTO {
      * 手机号
      */
     @ApiModelProperty(value = "手机号")
+    @Size(min = 11, max = 11, message = "请填写11位的手机号")
     private String phone;
 
     /**
@@ -64,6 +76,7 @@ public class UserDTO extends BaseDTO {
      * 昵称
      */
     @ApiModelProperty(value = "昵称")
+    @Size(min = 2, max = 22, message = "昵称不能超过32位")
     private String nickName;
 
     /**

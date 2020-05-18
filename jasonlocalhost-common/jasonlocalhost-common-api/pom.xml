@@ -27,6 +27,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--Feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!--参数校验-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

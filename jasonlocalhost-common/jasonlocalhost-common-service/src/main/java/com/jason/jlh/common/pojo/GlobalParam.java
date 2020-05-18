@@ -3,7 +3,7 @@ package com.jason.jlh.common.pojo;
 import com.jason.jlh.common.utils.SpringContextUtil;
 import com.jason.jlh.management.enums.user.UsertypeEnum;
 import com.jason.jlh.management.dto.user.UserDTO;
-import com.jason.jlh.management.service.impl.user.IUserService;
+import com.jason.jlh.management.service.user.IUserService;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * @title: GlobalParam
- * @package: com.jason.jlh.common.service
+ * @package: com.jason.jlh.common.pojo
  * @description: 全局参数实现类
  * @author: huyongjun
  * @date: 2020/5/3

@@ -17,5 +17,5 @@ apollo:
 
 server:
     port: 50001 # 项目端口号
-
-
+    servlet:
+        context-path: /web

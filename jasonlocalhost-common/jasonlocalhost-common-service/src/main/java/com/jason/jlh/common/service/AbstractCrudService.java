@@ -16,9 +16,10 @@ import javax.validation.constraints.NotNull;
  * @date: 2020/5/14
  * @version: v1.0
  */
+@Deprecated
 @SuppressWarnings("unchecked")
 public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
-        extends AbstractConverterService<Dto, Entity>
+        extends AbstractConverterService<Dto, Entity, Mapper>
         implements ICrudService<Dto> {
 
     @Autowired

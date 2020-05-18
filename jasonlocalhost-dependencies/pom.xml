@@ -74,6 +74,12 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
                 <version>${eureka.version}</version>
             </dependency>
+            <!--Feign-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${eureka.version}</version>
+            </dependency>
             <!--MySQL驱动-->
             <dependency>
                 <groupId>mysql</groupId>

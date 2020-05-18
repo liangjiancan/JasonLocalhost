@@ -10,6 +10,7 @@ import com.jason.jlh.common.pojo.BaseDTO;
  * @date: 2020/5/14
  * @version: v1.0
  */
+@Deprecated
 public interface ICrudService<Dto extends BaseDTO> extends IBaseService {
 
     /**

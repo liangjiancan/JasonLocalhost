@@ -1,5 +1,7 @@
 package com.jason.jlh.common.controller;
 
+import com.jason.jlh.common.service.IBaseService;
+
 /**
  * @title: BaseController
  * @package: com.jason.jlh.common.controller
@@ -9,5 +11,5 @@ package com.jason.jlh.common.controller;
  * @version: v1.0
  */
 @SuppressWarnings("unchecked")
-public interface BaseController {
+public abstract class BaseController<Service extends IBaseService> extends AbstractCommonController<Service> {
 }

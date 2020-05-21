@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @version: v1.0
  */
 @Slf4j
-public abstract class AbstractCommonController<Service extends IBaseService> implements BaseController, BaseWebFunction, BaseValidateFunction {
+public abstract class AbstractCommonController<Service extends IBaseService> implements BaseWebFunction, BaseValidateFunction {
 
     @Autowired
     Service service;

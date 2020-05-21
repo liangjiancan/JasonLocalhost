@@ -3,6 +3,8 @@ package com.jason.jlh.common.service;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
+import com.jason.jlh.common.support.BaseServiceFunction;
+import com.jason.jlh.common.support.BaseValidateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.constraints.NotBlank;
@@ -16,11 +18,10 @@ import javax.validation.constraints.NotNull;
  * @date: 2020/5/14
  * @version: v1.0
  */
-@Deprecated
 @SuppressWarnings("unchecked")
-public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
-        extends AbstractConverterService<Dto, Entity, Mapper>
-        implements ICrudService<Dto> {
+public abstract class AbstractCrudService<DTO extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
+        extends AbstractConverterService<DTO, Entity>
+        implements BaseServiceFunction, BaseValidateFunction, ICrudService<DTO> {
 
     @Autowired
     protected Mapper mapper;
@@ -29,12 +30,12 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
      * 根据主键查询
      *
      * @param: [id]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
     @Override
-    public Dto selectById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
+    public DTO selectById(@NotBlank(message = "操作失败, 主键不能为空") String id) {
         return toDto((Entity) mapper.selectById(id));
     }
 
@@ -42,12 +43,12 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
      * 新增
      *
      * @param: [dto]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
     @Override
-    public Dto insert(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+    public DTO insert(@NotNull(message = "操作失败, 参数不能为空") DTO dto) {
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.insert(entity));
         checkArgument(success, "操作失败");
@@ -58,12 +59,12 @@ public abstract class AbstractCrudService<Dto extends BaseDTO, Entity extends Ba
      * 根据主键更新
      *
      * @param: [dto]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
     @Override
-    public Dto updateById(@NotNull(message = "操作失败, 参数不能为空") Dto dto) {
+    public DTO updateById(@NotNull(message = "操作失败, 参数不能为空") DTO dto) {
         Entity entity = toEntity(dto);
         boolean success = retBool(mapper.updateById(entity));
         checkArgument(success, "操作失败");

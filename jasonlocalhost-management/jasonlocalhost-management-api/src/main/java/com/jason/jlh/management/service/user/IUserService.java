@@ -1,5 +1,6 @@
 package com.jason.jlh.management.service.user;
 
+import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.service.IBaseService;
 import com.jason.jlh.management.dto.user.UserDTO;
 
@@ -11,17 +12,7 @@ import com.jason.jlh.management.dto.user.UserDTO;
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IUserService extends IBaseService {
-
-    /**
-     * 根据主键查询
-     *
-     * @param: [id]
-     * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
-     * @date: 2020/5/18
-     */
-    UserDTO selectById(String id);
+public interface IUserService extends IBaseService<UserDTO> {
 
     /**
      * 更新用户数据
@@ -32,16 +23,6 @@ public interface IUserService extends IBaseService {
      * @date: 2020/5/15
      */
     UserDTO update(UserDTO userDTO);
-
-    /**
-     * 根据主键逻辑删除
-     *
-     * @param: [id]
-     * @return: boolean
-     * @author: huyongjun
-     * @date: 2020/5/18
-     */
-    boolean deleteById(String id);
 
     /**
      * 注册

@@ -1,6 +1,5 @@
 package com.jason.jlh.common.service;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jason.jlh.common.exception.ServiceException;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
@@ -10,7 +9,6 @@ import com.jason.jlh.common.support.Converter;
 import com.jason.jlh.common.support.IConverter;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.ParameterizedType;
 
@@ -24,11 +22,8 @@ import java.lang.reflect.ParameterizedType;
  */
 @Slf4j
 @SuppressWarnings("unchecked")
-public abstract class AbstractConverterService<Dto extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
-        implements BaseService, BaseServiceFunction, BaseValidateFunction, IConverter<Dto, Entity> {
-
-    @Autowired
-    protected Mapper mapper;
+public abstract class AbstractConverterService<Dto extends BaseDTO, Entity extends BaseEntity>
+        implements IConverter<Dto, Entity> {
 
     /**
      * Service上主要的Dto和Entity转换工具

@@ -10,38 +10,37 @@ import com.jason.jlh.common.pojo.BaseDTO;
  * @date: 2020/5/14
  * @version: v1.0
  */
-@Deprecated
-public interface ICrudService<Dto extends BaseDTO> extends IBaseService {
+public interface ICrudService<DTO extends BaseDTO> {
 
     /**
      * 根据主键查询
      * 
      * @param: [id]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    Dto selectById(String id);
+    DTO selectById(String id);
 
     /**
      * 新增
      * 
      * @param: [dto]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    Dto insert(Dto dto);
+    DTO insert(DTO dto);
 
     /**
      * 根据主键更新
      * 
      * @param: [dto]
-     * @return: Dto
+     * @return: DTO
      * @author: huyongjun
      * @date: 2020/5/14
      */
-    Dto updateById(Dto dto);
+    DTO updateById(DTO dto);
 
     /**
      * 根据主键删除

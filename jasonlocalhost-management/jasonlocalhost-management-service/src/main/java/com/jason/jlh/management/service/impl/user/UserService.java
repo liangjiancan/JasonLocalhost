@@ -3,6 +3,7 @@ package com.jason.jlh.management.service.impl.user;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.base.Strings;
 import com.jason.jlh.common.service.AbstractConverterService;
+import com.jason.jlh.common.service.BaseService;
 import com.jason.jlh.management.constant.user.UserConstant;
 import com.jason.jlh.management.dao.user.UserMapper;
 import com.jason.jlh.management.dto.user.UserDTO;
@@ -23,20 +24,7 @@ import java.util.Arrays;
  * @version: v1.0
  */
 @Service(loadbalance = "roundrobin")
-public class UserService extends AbstractConverterService<UserDTO, User, UserMapper> implements IUserService {
-
-    /**
-     * 根据主键查询
-     *
-     * @param: [id]
-     * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
-     * @date: 2020/5/18
-     */
-    @Override
-    public UserDTO selectById(String id) {
-        return toDto(mapper.selectById(id));
-    }
+public class UserService extends BaseService<UserDTO, User, UserMapper> implements IUserService {
 
     /**
      * 更新用户数据
@@ -59,22 +47,6 @@ public class UserService extends AbstractConverterService<UserDTO, User, UserMap
         boolean success = retBool(mapper.updateAllColumnById(user));
         checkArgument(success, "操作失败");
         return toDto(user);
-    }
-
-    /**
-     * 根据主键逻辑删除
-     *
-     * @param id
-     * @param: [id]
-     * @return: boolean
-     * @author: huyongjun
-     * @date: 2020/5/18
-     */
-    @Override
-    public boolean deleteById(String id) {
-        boolean success = retBool(mapper.deleteById(id));
-        checkArgument(success, "操作失败");
-        return true;
     }
 
     /**

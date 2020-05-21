@@ -1,5 +1,7 @@
 package com.jason.jlh.common.service;
 
+import com.jason.jlh.common.pojo.BaseDTO;
+
 /**
  * @title: IBaseService
  * @package: com.jason.jlh.common.service
@@ -8,5 +10,5 @@ package com.jason.jlh.common.service;
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IBaseService {
+public interface IBaseService<DTO extends BaseDTO> extends ICrudService<DTO> {
 }

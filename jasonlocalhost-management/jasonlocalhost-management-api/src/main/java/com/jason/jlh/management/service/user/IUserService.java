@@ -2,10 +2,6 @@ package com.jason.jlh.management.service.user;
 
 import com.jason.jlh.common.service.IBaseService;
 import com.jason.jlh.management.dto.user.UserDTO;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @title: IUserService
@@ -15,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date: 2020/5/3
  * @version: v1.0
  */
-@FeignClient("JASONLOCALHOST-MANAGEMENT-SERVICE")
 public interface IUserService extends IBaseService {
 
     /**
@@ -26,9 +21,7 @@ public interface IUserService extends IBaseService {
      * @author: huyongjun
      * @date: 2020/5/18
      */
-    @PostMapping(value = "/selectById")
-    @ResponseBody
-    UserDTO selectById(@RequestBody String id);
+    UserDTO selectById(String id);
 
     /**
      * 更新用户数据
@@ -38,9 +31,7 @@ public interface IUserService extends IBaseService {
      * @author: huyongjun
      * @date: 2020/5/15
      */
-    @PostMapping("/update")
-    @ResponseBody
-    UserDTO update(@RequestBody UserDTO userDTO);
+    UserDTO update(UserDTO userDTO);
 
     /**
      * 根据主键逻辑删除
@@ -50,8 +41,7 @@ public interface IUserService extends IBaseService {
      * @author: huyongjun
      * @date: 2020/5/18
      */
-    @PostMapping(value = "/deleteById")
-    boolean deleteById(@RequestBody String id);
+    boolean deleteById(String id);
 
     /**
      * 注册
@@ -61,8 +51,6 @@ public interface IUserService extends IBaseService {
      * @author: huyongjun
      * @date: 2020/5/17
      */
-    @PostMapping("/register")
-    @ResponseBody
-    UserDTO register(@RequestBody UserDTO userDTO);
+    UserDTO register(UserDTO userDTO);
 
 }

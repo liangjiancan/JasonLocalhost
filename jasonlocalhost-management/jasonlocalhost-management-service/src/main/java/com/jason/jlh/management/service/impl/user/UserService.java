@@ -10,7 +10,7 @@ import com.jason.jlh.management.entity.user.User;
 import com.jason.jlh.management.enums.user.UsertypeEnum;
 import com.jason.jlh.management.service.user.IUserService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.dubbo.config.annotation.Service;
 
 import java.util.Arrays;
 
@@ -22,7 +22,7 @@ import java.util.Arrays;
  * @date: 2020/5/3
  * @version: v1.0
  */
-@RestController
+@Service(loadbalance = "roundrobin")
 public class UserService extends AbstractConverterService<UserDTO, User, UserMapper> implements IUserService {
 
     /**

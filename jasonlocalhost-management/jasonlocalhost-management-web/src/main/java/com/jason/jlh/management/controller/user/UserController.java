@@ -5,7 +5,7 @@ import com.jason.jlh.management.service.user.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,8 +24,7 @@ import javax.validation.constraints.NotBlank;
 @RequestMapping("/user/user")
 public class UserController {
 
-    @SuppressWarnings("ALL")
-    @Autowired
+    @Reference(loadbalance = "roundrobin")
     private IUserService userService;
 
     /**

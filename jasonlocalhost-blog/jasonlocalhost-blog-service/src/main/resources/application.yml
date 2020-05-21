@@ -13,4 +13,7 @@ apollo:
         eagerLoad:
             enabled: true # 开启主动加载
         enabled: true # 开启启动阶段加载配置
-        namespaces: dev_dept.common_config, application # 指定需要加载的命名空间的配置
+        namespaces: dev_dept.common_config, dev_dept.common_service_config, application # 指定需要加载的命名空间的配置
+
+server:
+    port: 50102 # 项目端口号

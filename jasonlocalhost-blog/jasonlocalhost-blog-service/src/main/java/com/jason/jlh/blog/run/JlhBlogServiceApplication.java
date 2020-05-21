@@ -3,7 +3,7 @@ package com.jason.jlh.blog.run;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @title: JlhBlogServiceApplication
@@ -13,8 +13,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @date: 2020/5/3
  * @version: v1.0
  */
+@ComponentScan(basePackages = "com.jason")
 @MapperScan("com.jason.jlh.**.dao")
-@EnableDiscoveryClient
 @SpringBootApplication
 public class JlhBlogServiceApplication {
 

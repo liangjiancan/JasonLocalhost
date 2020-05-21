@@ -27,10 +27,15 @@
     </dependencyManagement>
 
     <dependencies>
-        <!--Feign-->
+        <!--Dubbo-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <!--Zookeeper-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
         </dependency>
         <!--参数校验-->
         <dependency>
@@ -49,26 +54,26 @@
         </dependency>
         <!--缓存注解-->
         <!--<dependency>-->
-            <!--<artifactId>jetcache-anno-api</artifactId>-->
-            <!--<groupId>com.alicp.jetcache</groupId>-->
+        <!--<artifactId>jetcache-anno-api</artifactId>-->
+        <!--<groupId>com.alicp.jetcache</groupId>-->
         <!--</dependency>-->
         <!--poi-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.poi</groupId>-->
-            <!--<artifactId>poi</artifactId>-->
+        <!--<groupId>org.apache.poi</groupId>-->
+        <!--<artifactId>poi</artifactId>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.poi</groupId>-->
-            <!--<artifactId>poi-ooxml</artifactId>-->
+        <!--<groupId>org.apache.poi</groupId>-->
+        <!--<artifactId>poi-ooxml</artifactId>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.poi</groupId>-->
-            <!--<artifactId>poi-ooxml-schemas</artifactId>-->
+        <!--<groupId>org.apache.poi</groupId>-->
+        <!--<artifactId>poi-ooxml-schemas</artifactId>-->
         <!--</dependency>-->
         <!--dom4j-->
         <!--<dependency>-->
-            <!--<groupId>org.dom4j</groupId>-->
-            <!--<artifactId>dom4j</artifactId>-->
+        <!--<groupId>org.dom4j</groupId>-->
+        <!--<artifactId>dom4j</artifactId>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

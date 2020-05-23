@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 从高到地低 OFF、FATAL、ERROR、WARN、INFO、DEBUG、TRACE、ALL-->
+<!-- 日志输出规则根据当前ROOT级别，日志输出时，级别高于ROOT默认的级别时会输出-->
+<!-- 以下每个配置的filter是过滤掉输出文件里面，会出现高级别文件，依然出现低级别的日志信息，通过filter过滤只记录本级别的日志-->
+<!-- 属性描述
+        scan: 设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true
+        scanPeriod: 设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟
+        debug: 当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值-->
+<configuration>
+
+    <property name="LOG_HOME" value="./logs"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-4relative [%thread] %highlight([%-5level]) %cyan(%logger{35}) - %msg %n"/>
+
+    <!--控制台输出-->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </layout>
+    </appender>
+
+    <!-- 业务日志输出-->
+    <appender name="webLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 可以是相对路径，可以是绝对路径-->
+        <file>${LOG_HOME}/web.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${LOG_HOME}/web.%d.%i.log.gz</fileNamePattern>
+            <!--最多存储多少天-->
+            <maxHistory>15</maxHistory>
+            <!--最大存储-->
+            <maxFileSize>30MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 业务日志logger-->
+    <logger name="webLog" level="INFO" additivity="false">
+        <appender-ref ref="webLogFile" />
+    </logger>
+
+    <!--ERROR日志输出-->
+    <appender name="errorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${LOG_HOME}/error.%d.%i.log.gz</fileNamePattern>
+            <!--最多存储多少天-->
+            <maxHistory>15</maxHistory>
+            <!--最大存储-->
+            <maxFileSize>30MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!--INFO日志输出-->
+    <appender name="infoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/info.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!--过滤error日志-->
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${LOG_HOME}/info.%d.%i.log.gz</fileNamePattern>
+            <!--最多存储多少天-->
+            <maxHistory>15</maxHistory>
+            <!--最大存储-->
+            <maxFileSize>30MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!--全局应用日志配置-->
+    <root level="info">
+        <appender-ref ref="consoleLog"/>
+        <appender-ref ref="infoLog"/>
+        <appender-ref ref="errorLog"/>
+    </root>
+</configuration>

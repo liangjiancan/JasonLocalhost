@@ -2,6 +2,7 @@ package com.jason.jlh.common.configuration;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.jason.jlh.common.interceptor.SqlLogInterceptor;
 import com.jason.jlh.common.mapper.extend.ExtendSqlInjector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -54,5 +55,18 @@ public class MyBatisPlusConfig {
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
+    }
+
+    /**
+     * SQL日志拦截器
+     *
+     * @param: []
+     * @return: com.jason.jlh.common.interceptor.SqlLogInterceptor
+     * @author: huyongjun
+     * @date: 2020/5/24
+     */
+    @Bean
+    public SqlLogInterceptor sqlLogInterceptor() {
+        return new SqlLogInterceptor();
     }
 }

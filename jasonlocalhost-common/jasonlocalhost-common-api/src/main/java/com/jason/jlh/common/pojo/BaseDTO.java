@@ -1,6 +1,9 @@
 package com.jason.jlh.common.pojo;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.validation.groups.Default;
 import java.time.LocalDateTime;
@@ -13,6 +16,9 @@ import java.time.LocalDateTime;
  * @date: 2020/5/3
  * @version: v1.0
  */
+@ApiModel(value = "DTO基类对象")
+@Data
+@EqualsAndHashCode(callSuper = false)
 public abstract class BaseDTO extends BaseValueObject {
 
     private static final long serialVersionUID = 1L;

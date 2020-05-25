@@ -36,7 +36,7 @@
             <!--路径-->
             <fileNamePattern>${LOG_HOME}/business.%d.%i.log.gz</fileNamePattern>
             <!--最多存储多少天-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>10</maxHistory>
             <!--最大存储-->
             <maxFileSize>30MB</maxFileSize>
         </rollingPolicy>
@@ -60,7 +60,7 @@
             <!--路径-->
             <fileNamePattern>${LOG_HOME}/sql.%d.%i.log.gz</fileNamePattern>
             <!--最多存储多少天-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>10</maxHistory>
             <!--最大存储-->
             <maxFileSize>30MB</maxFileSize>
         </rollingPolicy>
@@ -87,7 +87,7 @@
             <!--路径-->
             <fileNamePattern>${LOG_HOME}/error.%d.%i.log.gz</fileNamePattern>
             <!--最多存储多少天-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>10</maxHistory>
             <!--最大存储-->
             <maxFileSize>30MB</maxFileSize>
         </rollingPolicy>
@@ -112,7 +112,7 @@
             <!--路径-->
             <fileNamePattern>${LOG_HOME}/info.%d.%i.log.gz</fileNamePattern>
             <!--最多存储多少天-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>10</maxHistory>
             <!--最大存储-->
             <maxFileSize>30MB</maxFileSize>
         </rollingPolicy>

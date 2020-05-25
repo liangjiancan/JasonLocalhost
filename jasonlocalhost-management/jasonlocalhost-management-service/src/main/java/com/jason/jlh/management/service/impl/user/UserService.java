@@ -3,6 +3,7 @@ package com.jason.jlh.management.service.impl.user;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.base.Strings;
 import com.jason.jlh.common.service.AbstractConverterService;
+import com.jason.jlh.common.service.BaseCrudService;
 import com.jason.jlh.common.service.BaseService;
 import com.jason.jlh.management.constant.user.UserConstant;
 import com.jason.jlh.management.dao.user.UserMapper;
@@ -24,7 +25,7 @@ import java.util.Arrays;
  * @version: v1.0
  */
 @Service(loadbalance = "roundrobin")
-public class UserService extends BaseService<UserDTO, User, UserMapper> implements IUserService {
+public class UserService extends BaseCrudService<UserDTO, User, UserMapper> implements IUserService {
 
     /**
      * 更新用户数据

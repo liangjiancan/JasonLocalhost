@@ -10,11 +10,11 @@ import com.jason.jlh.common.pojo.BaseDTO;
  * @date: 2020/5/14
  * @version: v1.0
  */
-public interface ICrudService<DTO extends BaseDTO> {
+public interface ICrudService<DTO extends BaseDTO> extends IBaseService {
 
     /**
      * 根据主键查询
-     * 
+     *
      * @param: [id]
      * @return: DTO
      * @author: huyongjun
@@ -24,7 +24,7 @@ public interface ICrudService<DTO extends BaseDTO> {
 
     /**
      * 新增
-     * 
+     *
      * @param: [dto]
      * @return: DTO
      * @author: huyongjun
@@ -34,7 +34,7 @@ public interface ICrudService<DTO extends BaseDTO> {
 
     /**
      * 根据主键更新
-     * 
+     *
      * @param: [dto]
      * @return: DTO
      * @author: huyongjun
@@ -44,7 +44,7 @@ public interface ICrudService<DTO extends BaseDTO> {
 
     /**
      * 根据主键删除
-     * 
+     *
      * @param: [id]
      * @return: boolean
      * @author: huyongjun

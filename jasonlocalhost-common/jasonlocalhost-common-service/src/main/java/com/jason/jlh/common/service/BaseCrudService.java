@@ -3,15 +3,13 @@ package com.jason.jlh.common.service;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jason.jlh.common.pojo.BaseDTO;
 import com.jason.jlh.common.pojo.BaseEntity;
-import com.jason.jlh.common.support.BaseServiceFunction;
-import com.jason.jlh.common.support.BaseValidateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @title: AbstractCrudService
+ * @title: BaseCrudService
  * @package: com.jason.jlh.common.service
  * @description: CURD服务抽象类
  * @author: huyongjun
@@ -19,9 +17,8 @@ import javax.validation.constraints.NotNull;
  * @version: v1.0
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractCrudService<DTO extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
-        extends AbstractConverterService<DTO, Entity>
-        implements BaseServiceFunction, BaseValidateFunction, ICrudService<DTO> {
+public abstract class BaseCrudService<DTO extends BaseDTO, Entity extends BaseEntity, Mapper extends BaseMapper>
+        extends BaseService<DTO, Entity> implements ICrudService<DTO> {
 
     @Autowired
     protected Mapper mapper;

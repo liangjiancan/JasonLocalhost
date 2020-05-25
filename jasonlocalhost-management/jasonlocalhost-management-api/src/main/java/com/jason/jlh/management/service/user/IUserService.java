@@ -1,7 +1,6 @@
 package com.jason.jlh.management.service.user;
 
-import com.jason.jlh.common.pojo.BaseDTO;
-import com.jason.jlh.common.service.IBaseService;
+import com.jason.jlh.common.service.ICrudService;
 import com.jason.jlh.management.dto.user.UserDTO;
 
 /**
@@ -12,7 +11,7 @@ import com.jason.jlh.management.dto.user.UserDTO;
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IUserService extends IBaseService<UserDTO> {
+public interface IUserService extends ICrudService<UserDTO> {
 
     /**
      * 更新用户数据

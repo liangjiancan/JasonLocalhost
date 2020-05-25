@@ -10,5 +10,5 @@ import com.jason.jlh.common.pojo.BaseDTO;
  * @date: 2020/5/3
  * @version: v1.0
  */
-public interface IBaseService<DTO extends BaseDTO> extends ICrudService<DTO> {
+public interface IBaseService {
 }

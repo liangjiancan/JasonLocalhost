@@ -3,13 +3,13 @@ package com.jason.jlh.common.interceptor;
 import com.google.common.base.Stopwatch;
 import com.jason.jlh.common.pojo.log.SqlLogDTO;
 import com.jason.jlh.common.service.log.ILogService;
+import com.jason.jlh.common.utils.LogUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.plugin.*;
-import org.apache.ibatis.session.ResultHandler;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.util.CollectionUtils;
@@ -28,18 +28,13 @@ import java.util.concurrent.TimeUnit;
  * @date: 2020/5/23
  * @version: v1.0
  */
-@Intercepts(value = {@Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),
-        @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})})
+@Slf4j
+@Intercepts(value = {@Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})})
 public class SqlLogInterceptor implements Interceptor {
 
     @Autowired
     @Qualifier("sqlLogService")
     private ILogService sqlLogService;
-
-    /**
-     * 最大字符串长度
-     */
-    private static final int MAX_STRING_LENGTH = 1500;
 
     /**
      * 代理对象每次调用的方法，就是要进行拦截的时候要执行的方法
@@ -70,7 +65,7 @@ public class SqlLogInterceptor implements Interceptor {
             String commandType = mappedStatement.getSqlCommandType().name();
             // 获取SQL
             BoundSql boundSql = mappedStatement.getBoundSql(parameters);
-            String sql = limitStringLength(boundSql.getSql());
+            String sql = LogUtil.limitStringLength(boundSql.getSql());
             // 获取参数列表
             List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
             ArrayList parameterList = null;
@@ -90,7 +85,7 @@ public class SqlLogInterceptor implements Interceptor {
             sqlLogDTO.setResult(result instanceof Integer ? (Integer) result : null);
             sqlLogService.write(sqlLogDTO);
         } catch (Throwable e) {
-            // 日志记录不抛出异常
+            log.error("日志记录失败", e);
         }
         return result;
     }
@@ -119,24 +114,4 @@ public class SqlLogInterceptor implements Interceptor {
     @Override
     public void setProperties(Properties properties) {
     }
-
-    /**
-     * 限制字符串长度
-     *
-     * @param: [str]
-     * @return: java.lang.String
-     * @author: huyongjun
-     * @date: 2020/5/24
-     */
-    private String limitStringLength(String str) {
-        if (null == str) {
-            return null;
-        }
-        if (str.length() > MAX_STRING_LENGTH) {
-            return str.substring(0, MAX_STRING_LENGTH - 4) + " ...";
-        } else {
-            return str;
-        }
-    }
-
 }

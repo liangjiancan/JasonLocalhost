@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @title: LogDTO
@@ -38,5 +38,5 @@ public class LogDTO {
      * 操作时间
      */
     @ApiModelProperty(value = "操作时间")
-    private LocalDateTime operateTime;
+    private Date operateTime;
 }

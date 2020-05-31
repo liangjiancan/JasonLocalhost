@@ -20,7 +20,7 @@ import java.util.Arrays;
  * @title: UserService
  * @package: com.jason.jlh.management.service.impl.user
  * @description: 用户信息服务实现类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */
@@ -32,7 +32,7 @@ public class UserService extends BaseCrudService<UserDTO, User, UserMapper> impl
      *
      * @param: [userDTO]
      * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/15
      */
     @Override
@@ -55,7 +55,7 @@ public class UserService extends BaseCrudService<UserDTO, User, UserMapper> impl
      *
      * @param: [userDTO]
      * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/17
      */
     @Override
@@ -85,7 +85,7 @@ public class UserService extends BaseCrudService<UserDTO, User, UserMapper> impl
      *
      * @param: [tableColumn, value]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/18
      */
     private void checkUnique(String tableColumn, String value) {

@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
  * @title: User
  * @package: com.jason.jlh.management
  * @description: 用户信息实体类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

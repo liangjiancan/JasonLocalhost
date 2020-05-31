@@ -11,7 +11,7 @@ import java.io.IOException;
  * @title: PhoneNumberSerializer
  * @package: com.jason.jlh.common.serialization
  * @description: 电话号码序列化器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -26,7 +26,7 @@ public class PhoneNumberSerializer extends StdScalarSerializer<String> {
      *
      * @param: [str, jsonGenerator, serializerProvider]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

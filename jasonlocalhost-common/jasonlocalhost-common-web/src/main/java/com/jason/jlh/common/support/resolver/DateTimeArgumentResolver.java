@@ -22,7 +22,7 @@ import java.util.Date;
  * @title: DateTimeArgumentResolver
  * @package: com.jason.jlh.common.support.resolver
  * @description: 日期时间解析器, 对Get请求的日期时间进行处理
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -39,7 +39,7 @@ public class DateTimeArgumentResolver implements HandlerMethodArgumentResolver {
      *
      * @param: [parameter]
      * @return: boolean
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -61,7 +61,7 @@ public class DateTimeArgumentResolver implements HandlerMethodArgumentResolver {
      *
      * @param: [parameter, mavContainer, webRequest, binderFactory]
      * @return: java.lang.Object
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -85,7 +85,7 @@ public class DateTimeArgumentResolver implements HandlerMethodArgumentResolver {
      *
      * @param: [mapping, requestMethod]
      * @return: boolean
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     private static boolean containsMethod(RequestMapping mapping, RequestMethod requestMethod) {

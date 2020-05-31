@@ -32,7 +32,7 @@ public class ContextHolder implements IGlobalParam {
      *
      * @param: []
      * @return: com.jason.jlh.common.support.ContextHolder
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     public static ContextHolder getContext() {
@@ -44,7 +44,7 @@ public class ContextHolder implements IGlobalParam {
      *
      * @param: [gateway]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     public void setGateway(boolean gateway) {
@@ -56,7 +56,7 @@ public class ContextHolder implements IGlobalParam {
      *
      * @param: []
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     public void clear() {
@@ -174,7 +174,7 @@ public class ContextHolder implements IGlobalParam {
      *
      * @param: []
      * @return: java.util.Map<java.lang.String , java.lang.Object>
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/3
      */
     @Override

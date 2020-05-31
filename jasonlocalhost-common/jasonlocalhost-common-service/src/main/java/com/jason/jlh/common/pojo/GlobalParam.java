@@ -13,7 +13,7 @@ import java.util.Map;
  * @title: GlobalParam
  * @package: com.jason.jlh.common.pojo
  * @description: 全局参数实现类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

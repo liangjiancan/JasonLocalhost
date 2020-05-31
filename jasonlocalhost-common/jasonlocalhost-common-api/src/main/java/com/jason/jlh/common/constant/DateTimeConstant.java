@@ -4,7 +4,7 @@ package com.jason.jlh.common.constant;
  * @title: SpringMvcConfig
  * @package: com.jason.jlh.common.configuration
  * @description: 日期格式常量类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */

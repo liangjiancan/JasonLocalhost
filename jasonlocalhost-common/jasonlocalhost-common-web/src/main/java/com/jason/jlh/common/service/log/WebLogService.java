@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @title: WebLogService
  * @package: com.jason.jlh.common.service.log
  * @description: 网络日志服务实现
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/24
  * @version: v1.0
  */
@@ -27,7 +27,7 @@ public class WebLogService implements ILogService {
      * @param logDTO
      * @param: [logInfo]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/24
      */
     @Override

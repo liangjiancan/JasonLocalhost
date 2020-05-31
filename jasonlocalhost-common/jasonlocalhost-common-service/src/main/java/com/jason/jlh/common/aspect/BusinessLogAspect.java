@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  * @title: BusinessLogAspect
  * @package: com.jason.jlh.common.aspect
  * @description: 业务日志切面
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/24
  * @version: v1.0
  */
@@ -43,7 +43,7 @@ public class BusinessLogAspect {
      *
      * @param: []
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/25
      */
     @Pointcut("target(com.jason.jlh.common.service.BaseService+)")
@@ -55,7 +55,7 @@ public class BusinessLogAspect {
      *
      * @param: [joinPoint]
      * @return: java.lang.Object
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/25
      */
     @Around(value = "logPointCut()")

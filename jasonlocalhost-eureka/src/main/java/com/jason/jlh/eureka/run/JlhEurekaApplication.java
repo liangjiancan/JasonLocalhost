@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @title: JlhEurekaApplication
  * @package: com.jason.jlh.eureka.run
  * @description: SpringBoot引导类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

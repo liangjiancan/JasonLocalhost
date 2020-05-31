@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * @title: UpdateAllColumnById
  * @package: com.jason.jlh.common.mapper.extend
  * @description: updateAllColumnById方法定义类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -34,7 +34,7 @@ public class UpdateAllColumnById extends AbstractMethod {
      *
      * @param: [mapperClass Mapper类对象, modelClass 实体类类对象, tableInfo 表信息]
      * @return: org.apache.ibatis.mapping.MappedStatement
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -56,7 +56,7 @@ public class UpdateAllColumnById extends AbstractMethod {
      *
      * @param: [logic, ew, table, judgeAliasNull, alias, prefix]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -80,7 +80,7 @@ public class UpdateAllColumnById extends AbstractMethod {
      *
      * @param: [table, ignoreLogicDelFiled, prefix]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     protected String getAllSqlSet(TableInfo table, boolean ignoreLogicDelFiled, String prefix) {

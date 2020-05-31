@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
  * @title: ExtendMapper
  * @package: com.jason.jlh.common.mapper
  * @description: 基于MyBatis-plus的Mapper基类的增强Mapper, 提供额外的方法
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -20,7 +20,7 @@ public interface ExtendMapper<Entity> extends BaseMapper<Entity> {
      *
      * @param: [entity]
      * @return: int
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     int updateAllColumnById(@Param(Constants.ENTITY) Entity entity);

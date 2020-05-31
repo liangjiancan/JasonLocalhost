@@ -14,7 +14,7 @@ import java.util.List;
  * @title: JsonDeserializationIgnoreModifier
  * @package: com.jason.jlh.common.serialization
  * @description: Json忽略反序列化调整器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -25,7 +25,7 @@ public class JsonDeserializationIgnoreModifier extends BeanSerializerModifier {
      *
      * @param: [config, beanDesc, beanProperties]
      * @return: java.util.List<com.fasterxml.jackson.databind.ser.BeanPropertyWriter>
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

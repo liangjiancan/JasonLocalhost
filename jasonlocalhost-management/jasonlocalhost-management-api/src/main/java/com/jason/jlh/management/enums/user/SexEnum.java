@@ -12,7 +12,7 @@ import lombok.ToString;
  * @title: SexEnum
  * @package: com.jason.jlh.management.enums.user
  * @description: 性别枚举类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

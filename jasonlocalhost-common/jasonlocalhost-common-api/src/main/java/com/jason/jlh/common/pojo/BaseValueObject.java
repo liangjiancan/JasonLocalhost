@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @title: BaseValueObject
  * @package: com.jason.jlh.common.pojo
  * @description: 参数对象基类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

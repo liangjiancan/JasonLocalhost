@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
  * @title: SqlLogDTO
  * @package: com.jason.jlh.common.pojo.log
  * @description: SQL日志DTO
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/24
  * @version: v1.0
  */

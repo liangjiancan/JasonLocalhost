@@ -12,7 +12,7 @@ import java.io.IOException;
  * @title: TrimStringDeserializer
  * @package: com.jason.jlh.common.serialization
  * @description: 字符串去前后空格反序列化器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -23,7 +23,7 @@ public class TrimStringDeserializer extends StringDeserializer {
      *
      * @param: [parse, context]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

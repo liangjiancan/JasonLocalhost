@@ -11,7 +11,7 @@ import lombok.ToString;
  * @title: YesornoEnum
  * @package: com.jason.jlh.common.enums
  * @description: 是否枚举类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @title: FieldFillHandler
  * @package: com.jason.jlh.common.mapper.support
  * @description: 字段填充处理器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -24,7 +24,7 @@ public class FieldFillHandler implements MetaObjectHandler {
      *
      * @param: [metaObject]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -50,7 +50,7 @@ public class FieldFillHandler implements MetaObjectHandler {
      *
      * @param: [metaObject]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

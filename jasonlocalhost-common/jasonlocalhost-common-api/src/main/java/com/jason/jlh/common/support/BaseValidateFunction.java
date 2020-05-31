@@ -12,7 +12,7 @@ import java.util.Map;
  * @title: BaseValidateFunction
  * @package: com.jason.jlh.common.support
  * @description: 提供一些通用的校验方法
- * @author: huyongjun
+ * @author:
  * @date: 2020/4/20
  * @version: v1.0
  */
@@ -23,7 +23,7 @@ public interface BaseValidateFunction {
      *
      * @param: [content 校验的字符串]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotBlank(CharSequence content) {
@@ -35,7 +35,7 @@ public interface BaseValidateFunction {
      *
      * @param: [content 校验的字符串, errorMessage 校验失败时抛出的异常消息]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotBlank(CharSequence content, String errorMessage) {
@@ -47,7 +47,7 @@ public interface BaseValidateFunction {
      *
      * @param: [content 校验的字符串, errorMessageTemplate 校验失败时抛出的异常消息的格式化字符串模板, errorMessageArgs 格式化字符串参数(可变参数)]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotBlank(CharSequence content, String errorMessageTemplate, Object... errorMessageArgs) {
@@ -61,7 +61,7 @@ public interface BaseValidateFunction {
      *
      * @param: [obj 校验的对象]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotNull(Object obj) {
@@ -73,7 +73,7 @@ public interface BaseValidateFunction {
      *
      * @param: [obj 校验的对象, errorMessage 校验失败时抛出的异常消息]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotNull(Object obj, String errorMessage) {
@@ -85,7 +85,7 @@ public interface BaseValidateFunction {
      *
      * @param: [obj 校验的对象, errorMessageTemplate 校验失败时抛出的异常消息的格式化字符串模板, errorMessageArgs 格式化字符串参数(可变参数)]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/20
      */
     default void checkNotNull(Object obj, String errorMessageTemplate, Object... errorMessageArgs) {
@@ -99,7 +99,7 @@ public interface BaseValidateFunction {
      *
      * @param: [collection 校验的容器]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Collection collection) {
@@ -111,7 +111,7 @@ public interface BaseValidateFunction {
      *
      * @param: [collection 校验的容器, errorMessage 校验失败时抛出的异常消息]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Collection collection, String errorMessage) {
@@ -123,7 +123,7 @@ public interface BaseValidateFunction {
      *
      * @param: [collection 校验的容器, errorMessageTemplate 校验失败时抛出的异常消息的格式化字符串模板, errorMessageArgs 格式化字符串参数(可变参数)]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Collection collection, String errorMessageTemplate, Object... errorMessageArgs) {
@@ -137,7 +137,7 @@ public interface BaseValidateFunction {
      *
      * @param: [map 校验的容器]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Map map) {
@@ -149,7 +149,7 @@ public interface BaseValidateFunction {
      *
      * @param: [map 校验的容器, errorMessage 校验失败时抛出的异常消息]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Map map, String errorMessage) {
@@ -161,7 +161,7 @@ public interface BaseValidateFunction {
      *
      * @param: [map 校验的容器, errorMessageTemplate 校验失败时抛出的异常消息的格式化字符串模板, errorMessageArgs 格式化字符串参数(可变参数)]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/21
      */
     default void checkNotEmpty(Map map, String errorMessageTemplate, Object... errorMessageArgs) {
@@ -175,7 +175,7 @@ public interface BaseValidateFunction {
      *
      * @param: [expression 校验的布尔表达式]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/23
      */
     default void checkArgument(boolean expression) {
@@ -187,7 +187,7 @@ public interface BaseValidateFunction {
      *
      * @param: [expression 校验的布尔表达式, errorMessage 校验失败时抛出的异常消息]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/23
      */
     default void checkArgument(boolean expression, String errorMessage) {
@@ -199,7 +199,7 @@ public interface BaseValidateFunction {
      *
      * @param: [expression 校验的布尔表达式, errorMessageTemplate 校验失败时抛出的异常消息的格式化字符串模板, errorMessageArgs 格式化字符串参数(可变参数)]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/4/23
      */
     default void checkArgument(boolean expression, String errorMessageTemplate, Object... errorMessageArgs) {

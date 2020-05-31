@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @title: AbstractCommonController
  * @package: com.jason.jlh.common.controller
  * @description: 通用控制器抽象类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */
@@ -18,6 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class AbstractCommonController<Service extends IBaseService> implements BaseWebFunction, BaseValidateFunction {
 
     @Autowired
-    Service service;
+    protected Service service;
 
 }

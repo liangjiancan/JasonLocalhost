@@ -81,7 +81,7 @@ public interface IGlobalParam {
      * 
      * @param: []
      * @return: java.util.Map<java.lang.String,java.lang.Object>
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/3
      */
     Map<String, Object> getData();

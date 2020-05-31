@@ -4,7 +4,7 @@ package com.jason.jlh.common.constant;
  * @title: CommonConstant
  * @package: com.jason.jlh.common.constant
  * @description: 通用常量类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */

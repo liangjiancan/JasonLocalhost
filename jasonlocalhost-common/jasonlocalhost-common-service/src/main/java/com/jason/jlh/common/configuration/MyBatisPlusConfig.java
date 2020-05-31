@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @title: MyBatisPlusConfig
  * @package: com.jason.jlh.common.configuration
  * @description: MyBatis-plus配置类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -23,7 +23,7 @@ public class MyBatisPlusConfig {
      *
      * @param: []
      * @return: com.jason.jlh.common.mapper.extend.ExtendSqlInjector
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Bean
@@ -36,7 +36,7 @@ public class MyBatisPlusConfig {
      *
      * @param: []
      * @return: com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Bean
@@ -49,7 +49,7 @@ public class MyBatisPlusConfig {
      *
      * @param: []
      * @return: com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Bean
@@ -62,7 +62,7 @@ public class MyBatisPlusConfig {
      *
      * @param: []
      * @return: com.jason.jlh.common.interceptor.SqlLogInterceptor
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/24
      */
     @Bean

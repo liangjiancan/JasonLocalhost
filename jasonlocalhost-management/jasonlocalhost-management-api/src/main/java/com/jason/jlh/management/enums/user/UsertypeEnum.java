@@ -12,7 +12,7 @@ import lombok.ToString;
  * @title: UsertypeEnum
  * @package: com.jason.jlh.management.enums.user
  * @description: 用户类型枚举类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

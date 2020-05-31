@@ -6,7 +6,7 @@ import com.jason.jlh.common.constant.CommonConstant;
  * @title: UserConstant
  * @package: com.jason.jlh.management.constant.user
  * @description: 用户信息常量类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/15
  * @version: v1.0
  */

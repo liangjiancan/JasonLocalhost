@@ -6,7 +6,7 @@ import lombok.Getter;
  * @title: WebException
  * @package: com.jason.jlh.common.exception
  * @description: Web层异常
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */

@@ -9,7 +9,7 @@ import java.util.List;
  * @title: ExtendSqlInjector
  * @package: com.jason.jlh.common.mapper.extend
  * @description: 增强SQL注入器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -20,7 +20,7 @@ public class ExtendSqlInjector extends DefaultSqlInjector {
      *
      * @param: []
      * @return: java.util.List<com.baomidou.mybatisplus.core.injector.AbstractMethod>
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

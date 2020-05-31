@@ -15,7 +15,7 @@ import javax.validation.constraints.NotBlank;
  * @title: UserController
  * @package: com.jason.jlh.management.controller.user
  * @description: 用户信息控制器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/4
  * @version: v1.0
  */
@@ -32,7 +32,7 @@ public class UserController {
      *
      * @param: [id]
      * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/15
      */
     @ApiOperation("根据主键查看用户数据")
@@ -46,7 +46,7 @@ public class UserController {
      *
      * @param: [userDTO]
      * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/15
      */
     @ApiOperation("根据主键修改用户数据")
@@ -60,7 +60,7 @@ public class UserController {
      *
      * @param: [userDTO]
      * @return: com.jason.jlh.management.dto.user.UserDTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/15
      */
     @ApiOperation("根据主键修改用户数据")
@@ -74,7 +74,7 @@ public class UserController {
      *
      * @param: [id]
      * @return: boolean
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/15
      */
     @ApiOperation("注销账号")

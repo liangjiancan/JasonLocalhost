@@ -6,7 +6,7 @@ import com.jason.jlh.common.pojo.BaseDTO;
  * @title: ICrudService
  * @package: com.jason.jlh.common.service
  * @description: CRUD服务接口
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */
@@ -17,7 +17,7 @@ public interface ICrudService<DTO extends BaseDTO> extends IBaseService {
      *
      * @param: [id]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     DTO selectById(String id);
@@ -27,7 +27,7 @@ public interface ICrudService<DTO extends BaseDTO> extends IBaseService {
      *
      * @param: [dto]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     DTO insert(DTO dto);
@@ -37,7 +37,7 @@ public interface ICrudService<DTO extends BaseDTO> extends IBaseService {
      *
      * @param: [dto]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     DTO updateById(DTO dto);
@@ -47,7 +47,7 @@ public interface ICrudService<DTO extends BaseDTO> extends IBaseService {
      *
      * @param: [id]
      * @return: boolean
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     boolean deleteById(String id);

@@ -7,7 +7,7 @@ import com.jason.jlh.management.entity.user.User;
  * @title: UserMapper
  * @package: com.jason.jlh.management.dao.user
  * @description: 用户信息Mapper
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/4
  * @version: v1.0
  */

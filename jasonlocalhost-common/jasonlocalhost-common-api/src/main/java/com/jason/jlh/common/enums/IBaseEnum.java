@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @title: IBaseEnum
  * @package: com.jason.jlh.common.enums
  * @description: 枚举基类接口
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */

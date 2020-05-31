@@ -33,7 +33,7 @@ import java.util.TimeZone;
  * @title: SpringMvcConfig
  * @package: com.jason.jlh.common.configuration
  * @description: SpringMVC配置类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -45,7 +45,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      *
      * @param: [converters]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override
@@ -59,7 +59,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      *
      * @param: []
      * @return: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Bean
@@ -74,7 +74,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      *
      * @param: []
      * @return: com.fasterxml.jackson.databind.ObjectMapper
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Bean
@@ -113,7 +113,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      *
      * @param: [argumentResolvers]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  * @title: SqlLogInterceptor
  * @package: com.jason.jlh.common.interceptor
  * @description: 自定义MyBatis拦截器, 用于记录SQL日志
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/23
  * @version: v1.0
  */
@@ -42,7 +42,7 @@ public class SqlLogInterceptor implements Interceptor {
      *
      * @param: [invocation]
      * @return: java.lang.Object
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/23
      */
     @Override
@@ -95,7 +95,7 @@ public class SqlLogInterceptor implements Interceptor {
      *
      * @param: [target]
      * @return: java.lang.Object
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/23
      */
     @Override
@@ -108,7 +108,7 @@ public class SqlLogInterceptor implements Interceptor {
      *
      * @param: [properties]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/23
      */
     @Override

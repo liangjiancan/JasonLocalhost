@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  * @title: LogUtil
  * @package: com.jason.jlh.common.utils
  * @description: 日志工具类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/25
  * @version: v1.0
  */
@@ -40,7 +40,7 @@ public class LogUtil {
      *
      * @param: [returns, maxLength]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/25
      */
     public static String toJsonString(Object returns, int maxLength) {
@@ -64,7 +64,7 @@ public class LogUtil {
      *
      * @param: [e]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/25
      */
     public static String toJsonString(Throwable e) {
@@ -82,7 +82,7 @@ public class LogUtil {
      *
      * @param: [str]
      * @return: java.lang.String
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/24
      */
     public static String limitStringLength(String str) {

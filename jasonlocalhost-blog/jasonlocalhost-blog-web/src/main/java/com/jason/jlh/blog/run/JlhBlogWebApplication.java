@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @title: JlhBlogWebApplication
  * @package: com.jason.jlh.blog.run
  * @description: SpringBoot引导类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

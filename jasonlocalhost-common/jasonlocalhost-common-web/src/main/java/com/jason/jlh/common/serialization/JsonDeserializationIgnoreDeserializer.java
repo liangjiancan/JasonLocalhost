@@ -11,7 +11,7 @@ import java.io.IOException;
  * @title: JsonDeserializationIgnoreDeserializer
  * @package: com.jason.jlh.common.serialization
  * @description: 不进行Json序列化的反序列化器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -26,7 +26,7 @@ public class JsonDeserializationIgnoreDeserializer extends StdScalarDeserializer
      * 
      * @param: [parser, context]
      * @return: java.lang.Object
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

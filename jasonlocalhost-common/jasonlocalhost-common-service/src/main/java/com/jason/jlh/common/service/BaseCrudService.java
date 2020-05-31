@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * @title: BaseCrudService
  * @package: com.jason.jlh.common.service
  * @description: CURD服务抽象类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */
@@ -28,7 +28,7 @@ public abstract class BaseCrudService<DTO extends BaseDTO, Entity extends BaseEn
      *
      * @param: [id]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     @Override
@@ -41,7 +41,7 @@ public abstract class BaseCrudService<DTO extends BaseDTO, Entity extends BaseEn
      *
      * @param: [dto]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     @Override
@@ -57,7 +57,7 @@ public abstract class BaseCrudService<DTO extends BaseDTO, Entity extends BaseEn
      *
      * @param: [dto]
      * @return: DTO
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     @Override
@@ -73,7 +73,7 @@ public abstract class BaseCrudService<DTO extends BaseDTO, Entity extends BaseEn
      *
      * @param: [id]
      * @return: boolean
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/14
      */
     @Override

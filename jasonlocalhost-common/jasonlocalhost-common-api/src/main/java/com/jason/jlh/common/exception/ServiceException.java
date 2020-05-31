@@ -6,7 +6,7 @@ import lombok.Getter;
  * @title: NotImplementException
  * @package: com.jason.jlh.common.exception
  * @description: 服务端业务逻辑类异常
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

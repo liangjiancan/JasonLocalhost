@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
  * @title: ResponseResult
  * @package: com.jason.jlh.common.pojo
  * @description: 响应结果, 统一格式封装返回到前端的数据
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */

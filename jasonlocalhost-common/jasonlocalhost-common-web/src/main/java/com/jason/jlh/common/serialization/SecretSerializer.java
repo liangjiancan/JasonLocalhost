@@ -10,7 +10,7 @@ import java.io.IOException;
  * @title: SecretSerializer
  * @package: com.jason.jlh.common.serialization
  * @description: 敏感信息序列化器
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/16
  * @version: v1.0
  */
@@ -25,7 +25,7 @@ public class SecretSerializer extends StdScalarSerializer<String> {
      * 
      * @param: [str, jsonGenerator, serializerProvider]
      * @return: void
-     * @author: huyongjun
+     * @author:
      * @date: 2020/5/16
      */
     @Override

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @title: BaseValueObject
  * @package: com.jason.jlh.common.pojo
  * @description: DTO基类
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

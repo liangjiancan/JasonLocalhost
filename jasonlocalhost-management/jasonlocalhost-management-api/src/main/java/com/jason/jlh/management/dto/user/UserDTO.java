@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  * @title: UserDTO
  * @package: com.jason.jlh.management.pojo
  * @description: 用户信息DTO
- * @author: huyongjun
+ * @author:
  * @date: 2020/5/3
  * @version: v1.0
  */

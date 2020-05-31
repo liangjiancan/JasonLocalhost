@@ -7,17 +7,18 @@ import com.jason.jlh.common.pojo.ResponseResult;
 import com.jason.jlh.common.support.BaseWebFunction;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.yaml.snakeyaml.constructor.DuplicateKeyException;
+
 
 /**
  * @title: BadRequesetExceptionAdvice
  * @package: com.jason.jlh.common.advice
- * @description: 一般请求异常全局处理类
+ * @description: 错误请求异常全局处理类
  * @author:
  * @date: 2020/5/31
  * @version: v1.0
@@ -25,7 +26,7 @@ import org.yaml.snakeyaml.constructor.DuplicateKeyException;
 @Order(1)
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 @ControllerAdvice
-public class CommonRequesetExceptionAdvice implements BaseWebFunction {
+public class BadRequesetExceptionAdvice implements BaseWebFunction {
 
     /**
      * 提示消息
@@ -44,7 +45,7 @@ public class CommonRequesetExceptionAdvice implements BaseWebFunction {
      */
     @ExceptionHandler(DuplicateKeyException.class)
     @ResponseBody
-    public ResponseResult<Object> bindExceptionHandler(DuplicateKeyException e) {
+    public ResponseResult<Object> exceptionHandler(DuplicateKeyException e) {
         return new ResponseResult<>(HttpStatus.BAD_REQUEST.toString(), MSG_DATA_EXIST, getHttpRequestContent());
     }
 
@@ -58,7 +59,7 @@ public class CommonRequesetExceptionAdvice implements BaseWebFunction {
      */
     @ExceptionHandler(DataIntegrityViolationException.class)
     @ResponseBody
-    public ResponseResult<Object> bindExceptionHandler(DataIntegrityViolationException e) {
+    public ResponseResult<Object> exceptionHandler(DataIntegrityViolationException e) {
         return new ResponseResult<>(HttpStatus.BAD_REQUEST.toString(), MSG_FOREIGN_KEY_EXCEPTION, getHttpRequestContent());
     }
 
@@ -72,7 +73,7 @@ public class CommonRequesetExceptionAdvice implements BaseWebFunction {
      */
     @ExceptionHandler(JsonParseException.class)
     @ResponseBody
-    public ResponseResult<Object> bindExceptionHandler(JsonParseException e) {
+    public ResponseResult<Object> exceptionHandler(JsonParseException e) {
         return new ResponseResult<>(false, HttpStatus.BAD_REQUEST.toString(), MSG_JSON_PARSE_FAIL, getHttpRequestContent(), e.getMessage());
     }
 
@@ -86,7 +87,7 @@ public class CommonRequesetExceptionAdvice implements BaseWebFunction {
      */
     @ExceptionHandler(ServiceException.class)
     @ResponseBody
-    public ResponseResult<Object> bindExceptionHandler(ServiceException e) {
+    public ResponseResult<Object> exceptionHandler(ServiceException e) {
         return new ResponseResult<>(false, HttpStatus.BAD_REQUEST.toString(), e.getMessage(), getHttpRequestContent(), e.getData());
     }
 
@@ -100,7 +101,7 @@ public class CommonRequesetExceptionAdvice implements BaseWebFunction {
      */
     @ExceptionHandler(WebException.class)
     @ResponseBody
-    public ResponseResult<Object> bindExceptionHandler(WebException e) {
+    public ResponseResult<Object> exceptionHandler(WebException e) {
         return new ResponseResult<>(false, HttpStatus.BAD_REQUEST.toString(), e.getMessage(), getHttpRequestContent(), e.getData());
     }
 }

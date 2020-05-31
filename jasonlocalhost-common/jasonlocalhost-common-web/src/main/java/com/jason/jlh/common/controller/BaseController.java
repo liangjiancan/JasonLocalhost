@@ -15,7 +15,7 @@ import com.jason.jlh.common.support.BaseWebFunction;
  */
 @SuppressWarnings("unchecked")
 public abstract class BaseController<Service extends IBaseService>
-        extends AbstractCommonController<Service>
+        extends AbstractExtendController<Service>
         implements BaseFunction, BaseWebFunction, BaseValidateFunction {
 
 }

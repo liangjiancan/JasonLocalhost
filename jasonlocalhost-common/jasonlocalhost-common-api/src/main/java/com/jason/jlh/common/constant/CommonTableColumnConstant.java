@@ -1,14 +1,14 @@
 package com.jason.jlh.common.constant;
 
 /**
- * @title: CommonConstant
+ * @title: CommonTableColumnConstant
  * @package: com.jason.jlh.common.constant
- * @description: 通用常量类
+ * @description: 通用表字段常量类
  * @author:
  * @date: 2020/5/14
  * @version: v1.0
  */
-public interface CommonConstant {
+public interface CommonTableColumnConstant {
 
     /**
      * 通用表字段

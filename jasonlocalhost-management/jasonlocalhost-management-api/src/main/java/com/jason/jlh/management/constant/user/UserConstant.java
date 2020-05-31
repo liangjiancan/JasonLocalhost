@@ -1,6 +1,6 @@
 package com.jason.jlh.management.constant.user;
 
-import com.jason.jlh.common.constant.CommonConstant;
+import com.jason.jlh.common.constant.CommonTableColumnConstant;
 
 /**
  * @title: UserConstant
@@ -10,7 +10,7 @@ import com.jason.jlh.common.constant.CommonConstant;
  * @date: 2020/5/15
  * @version: v1.0
  */
-public class UserConstant implements CommonConstant {
+public class UserConstant implements CommonTableColumnConstant {
 
     private UserConstant() {
     }

@@ -1,13 +1,11 @@
 package com.jason.jlh.common.controller;
 
 import com.jason.jlh.common.service.IBaseService;
-import com.jason.jlh.common.support.BaseValidateFunction;
-import com.jason.jlh.common.support.BaseWebFunction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @title: AbstractCommonController
+ * @title: AbstractExtendController
  * @package: com.jason.jlh.common.controller
  * @description: 通用控制器抽象类
  * @author:
@@ -15,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @version: v1.0
  */
 @Slf4j
-public abstract class AbstractCommonController<Service extends IBaseService> implements BaseWebFunction, BaseValidateFunction {
+public abstract class AbstractExtendController<Service extends IBaseService> {
 
     @Autowired
     protected Service service;

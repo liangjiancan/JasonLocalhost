@@ -23,7 +23,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 public class RessponseResultAdvice implements ResponseBodyAdvice<Object>, BaseWebFunction {
 
     @Value("${server.servlet.context-path}")
-    String contextPath;
+    private String contextPath;
 
     @Value("${jlh.module}")
     private String module;

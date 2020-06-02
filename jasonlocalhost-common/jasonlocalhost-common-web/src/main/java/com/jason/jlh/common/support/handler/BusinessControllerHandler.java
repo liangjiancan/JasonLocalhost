@@ -33,6 +33,7 @@ public class BusinessControllerHandler implements BeanFactoryPostProcessor {
 
     /**
      * 对BeanFactory中的实例进行后置处理
+     * 此处用于修改带有@BusinessController注释的类的@RequestMapping, 达到全局统一请求路径前缀的目的
      *
      * @param: [beanFactory]
      * @return: void
@@ -104,7 +105,7 @@ public class BusinessControllerHandler implements BeanFactoryPostProcessor {
      * @author: huyongjun
      * @date: 2020/6/1
      */
-    private String drawModulePath(String fullPackageName) {
+    protected String drawModulePath(String fullPackageName) {
         String moduleName = "";
         if (StringUtils.isBlank(fullPackageName)) {
             return moduleName;
@@ -128,7 +129,7 @@ public class BusinessControllerHandler implements BeanFactoryPostProcessor {
      * @author: huyongjun
      * @date: 2020/6/1
      */
-    private String drawPackagePath(String fullPackageName) {
+    protected String drawPackagePath(String fullPackageName) {
         String packageName = "";
         if (StringUtils.isBlank(fullPackageName)) {
             return packageName;

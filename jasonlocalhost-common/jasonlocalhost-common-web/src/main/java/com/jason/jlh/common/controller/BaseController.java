@@ -1,6 +1,5 @@
 package com.jason.jlh.common.controller;
 
-import com.jason.jlh.common.service.IBaseService;
 import com.jason.jlh.common.support.BaseFunction;
 import com.jason.jlh.common.support.BaseValidateFunction;
 import com.jason.jlh.common.support.BaseWebFunction;
@@ -14,8 +13,7 @@ import com.jason.jlh.common.support.BaseWebFunction;
  * @version: v1.0
  */
 @SuppressWarnings("unchecked")
-public abstract class BaseController<Service extends IBaseService>
-        extends AbstractExtendController<Service>
+public abstract class BaseController
         implements BaseFunction, BaseWebFunction, BaseValidateFunction {
 
 }

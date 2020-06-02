@@ -1,7 +1,5 @@
 package com.jason.jlh.common.service;
 
-import com.jason.jlh.common.pojo.BaseDTO;
-
 /**
  * @title: IBaseService
  * @package: com.jason.jlh.common.service

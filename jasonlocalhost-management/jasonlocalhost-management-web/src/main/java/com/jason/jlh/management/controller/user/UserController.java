@@ -1,5 +1,7 @@
 package com.jason.jlh.management.controller.user;
 
+import com.jason.jlh.common.annotation.BusinessController;
+import com.jason.jlh.common.controller.BaseController;
 import com.jason.jlh.management.dto.user.UserDTO;
 import com.jason.jlh.management.service.user.IUserService;
 import io.swagger.annotations.Api;
@@ -7,7 +9,9 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.constraints.NotBlank;
 
@@ -20,12 +24,11 @@ import javax.validation.constraints.NotBlank;
  * @version: v1.0
  */
 @Api("用户信息")
-@RestController
-@RequestMapping("/user/user")
-public class UserController {
+@BusinessController("/user")
+public class UserController extends BaseController {
 
-    @Reference(loadbalance = "roundrobin")
-    private IUserService userService;
+    @Reference
+    private IUserService service;
 
     /**
      * 根据主键查看用户数据
@@ -38,7 +41,7 @@ public class UserController {
     @ApiOperation("根据主键查看用户数据")
     @GetMapping("/select")
     public UserDTO select(@ApiParam("用户主键") @NotBlank(message = "主键不能为空") String id) {
-        return userService.selectById(id);
+        return service.selectById(id);
     }
 
     /**
@@ -52,7 +55,7 @@ public class UserController {
     @ApiOperation("根据主键修改用户数据")
     @PostMapping("/register")
     public UserDTO register(@RequestBody @Validated({UserDTO.Register.class}) UserDTO userDTO) {
-        return userService.register(userDTO);
+        return service.register(userDTO);
     }
 
     /**
@@ -66,7 +69,7 @@ public class UserController {
     @ApiOperation("根据主键修改用户数据")
     @PostMapping("/update")
     public UserDTO update(@RequestBody @Validated({UserDTO.Update.class}) UserDTO userDTO) {
-        return userService.update(userDTO);
+        return service.update(userDTO);
     }
 
     /**
@@ -80,6 +83,6 @@ public class UserController {
     @ApiOperation("注销账号")
     @PostMapping("/unsubscribe")
     public boolean unsubscribe(@ApiParam("用户主键") @NotBlank(message = "主键不能为空") String id) {
-        return userService.deleteById(id);
+        return service.deleteById(id);
     }
 }
